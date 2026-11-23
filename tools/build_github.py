@@ -24,7 +24,8 @@ KNOWN = {
     "5be0d5253729ae85226128d7500f2982": "assets/logo-government-of-dubai.png",
     "b1dcdf8a583754ef7bfec3a744dc1ff8": "assets/logo-acis.png",
     "5438a066ac0b2abe6f9b3b0d7851c092": "assets/logo-dubai-police.png",
-    "bbc1c4ba434efe257939f45b4774f7f0": "assets/app-icon.png",
+    "1122195bbfbc74b58778b70a2d8b2339": "assets/app-icon.png",
+    "bbc1c4ba434efe257939f45b4774f7f0": "assets/app-icon-previous.png",
     "734c32606cfc02dc09c0a64d0f967153": "assets/fonts/29LT-Bukra-Regular.otf",
     "6a9980a112c35901d776637443351268": "assets/fonts/29LT-Bukra-Bold.otf",
 }
