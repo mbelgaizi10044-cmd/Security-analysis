@@ -39,6 +39,8 @@ data/snapshot.json          Full export of every record: news, threat levels, br
 assets/                     Official logos (Government of Dubai, Dubai Police, ACIS) and the app icon
 assets/fonts/               Place for the licensed 29LT Bukra font files (not published; see the note inside)
 artifact-capabilities.json  Runtime capabilities and database access rules used when publishing in Claude
+tools/build_github.py       Builds index.html and data/snapshot.json from the live platform (used by the automatic sync)
+CLAUDE.md                   Sync rules: every platform update is mirrored here
 ```
 
 **Two versions, one platform.** Inside Claude, `platform/index.html` is fully live: automatic updates, continuous watch, AI features, saving and sign-off. On GitHub Pages, `index.html` shows everything that was saved up to the export date (map, threat board, news, search, briefings, weekly archive, forecasts, Operations room) and downloads work as normal browser downloads. Live updates, AI and saving work only inside Claude.
@@ -66,6 +68,6 @@ Everyone with access can read; only the owner and editors can write (`admin`). R
 
 ## ملاحظات · Notes
 
-- **البيانات · Data:** `data/snapshot.json` is a copy of the platform's database at the export date. New news keeps arriving in the live platform inside Claude; export again to refresh the GitHub copy.
+- **المزامنة التلقائية · Automatic sync:** a scheduled task copies the live platform and all its data to this repository every hour. Code changes to the platform are pushed here at the same time they are published. The date at the top of the GitHub page shows when the data last changed.
 - **الخط · Font:** 29LT Bukra is commercially licensed, so its files are not in this public repository. The page falls back to IBM Plex Sans Arabic and Noto Kufi Arabic.
 - **النشر · Publishing:** publish `platform/index.html` as a Claude artifact with the capabilities in `artifact-capabilities.json`, and copy the logo and font files into the artifact's assets.

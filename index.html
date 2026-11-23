@@ -830,14 +830,14 @@ function itemHTML(n,opts={}){
     ${sum&&orig?`<details><summary>${esc(t("sourceText"))}</summary><div dir="auto">${esc(orig)}</div></details>`:""}
     ${(n.verify==="confirmed"||n.verify==="unconfirmed")&&L(n,"verifyNote")?`<div class="vnote ${n.verify}" dir="auto">${esc(L(n,"verifyNote"))}</div>`:""}
     ${n.sources&&n.sources.length>1?`<details><summary>${esc(t("srcList"))} (${n.sources.length})</summary><div>${n.sources.map(x=>x.link?`<a class="srclink" href="${esc(safeUrl(x.link))}" target="_blank" rel="noopener">${esc(x.name||x.link)}</a>`:esc(x.name||"")).join("<br>")}</div></details>`:""}
-    ${(imgs.length||pdfs.length)?`<div class="att">${imgs.map(a=>`<button class="thumb" data-img="${esc(a.id)}" aria-label="${esc(a.name||"image")}"><img src="assets/files/${esc(a.id)}" alt="" loading="lazy"></button>`).join("")}${pdfs.map(a=>`<a class="pdf" href="assets/files/${esc(a.id)}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg><span>${esc(a.name||"PDF")}</span></a>`).join("")}</div>`:""}
+    ${(imgs.length||pdfs.length)?`<div class="att">${imgs.map(a=>`<button class="thumb" data-img="${esc(a.id)}" aria-label="${esc(a.name||"image")}"><img src="${assetUrl(esc(a.id))}" alt="" loading="lazy"></button>`).join("")}${pdfs.map(a=>`<a class="pdf" href="${assetUrl(esc(a.id))}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg><span>${esc(a.name||"PDF")}</span></a>`).join("")}</div>`:""}
     <div class="acts"><button class="sharebtn" data-share="${n.id}" aria-label="${esc(t("share"))}">${SHAREIC}${esc(t("share"))}</button><button class="fcbtn" data-fc="${n.id}">${SPARKSM}${esc(t("fcNewsBtn"))}</button>${isOwner&&n.verify!=="confirmed"&&n.verify!=="checking"?`<button data-verify="${n.id}">${esc(t("verifyBtn"))}</button>`:""}${isOwner&&n.mergedFrom&&n.mergedFrom.length?`<button data-unmerge="${n.id}">${esc(t("unmergeBtn"))}</button>`:""}${isOwner?`<button data-edit="${n.id}">${esc(t("edit"))}</button><button data-del="${n.id}">${esc(t("del"))}</button>`:""}</div>
   </article>`;
 }
 const safeUrl=u=>/^https?:\/\//i.test(u||"")?u:"#";
 function wireItems(root){
   root.querySelectorAll(".more").forEach(b=>b.onclick=()=>{ const it=b.closest(".item"); it.classList.toggle("open"); b.textContent=it.classList.contains("open")?t("readLess"):t("readMore"); });
-  root.querySelectorAll("[data-img]").forEach(b=>b.onclick=()=>{ $("#lbImg").src="assets/files/"+b.dataset.img; $("#lightbox").hidden=false; });
+  root.querySelectorAll("[data-img]").forEach(b=>b.onclick=()=>{ $("#lbImg").src=assetUrl(b.dataset.img); $("#lightbox").hidden=false; });
   root.querySelectorAll("[data-edit]").forEach(b=>b.onclick=()=>openNewsForm(news.find(n=>n.id===b.dataset.edit)));
   root.querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>confirmDelete(t("confirmDel"),()=>deleteNews(b.dataset.del)));
   root.querySelectorAll("[data-fc]").forEach(b=>b.onclick=()=>fcNewsClick(b.dataset.fc));
@@ -1044,7 +1044,7 @@ const blobToDataURL=b=>new Promise((res,rej)=>{ const r=new FileReader(); r.onlo
 async function inlineImages(n){
   const out=[];
   for(const a of normNews(n).imgs){
-    try{ const r=await fetch("assets/files/"+a.id); if(!r.ok) continue; out.push(await blobToDataURL(await r.blob())); }catch(_){}
+    try{ const r=await fetch(assetUrl(a.id)); if(!r.ok) continue; out.push(await blobToDataURL(await r.blob())); }catch(_){}
   }
   return out;
 }
@@ -1120,7 +1120,7 @@ async function phoneCanvas(n){
   const v=normNews(n);
   await docFonts();
   const [gov,acis,police]=await Promise.all([LOGOS.gov,LOGOS.acis,LOGOS.police].map(loadImg));
-  const atts=(await Promise.all(v.imgs.map(a=>loadImg("assets/files/"+a.id)))).filter(Boolean);
+  const atts=(await Promise.all(v.imgs.map(a=>loadImg(assetUrl(a.id))))).filter(Boolean);
   const meas=document.createElement("canvas").getContext("2d");
   const font=(px,wt)=>`${wt||400} ${px}px ${PH_FONT}`;
   const W=PH.W, X0=PH.pad, CW=W-2*PH.pad, IW=CW-2*PH.cardPad;
@@ -1366,7 +1366,7 @@ const thumbURL=f=>{ if(!objURLs.has(f)) objURLs.set(f,URL.createObjectURL(f)); r
 function drawFiles(){
   const chip=(label,img,attr)=>`<span class="fileitem">${img?`<img src="${img}" alt="">`:""}<span>${esc(label)}</span><button type="button" ${attr} aria-label="Remove">×</button></span>`;
   $("#nfPdfList").innerHTML=form.keep.filter(a=>a.kind==="pdf").map(a=>chip(a.name||"PDF","",`data-rk="${esc(a.id)}"`)).join("")+form.newPdfs.map((f,i)=>chip(f.name,"",`data-rp="${i}"`)).join("");
-  $("#nfImgList").innerHTML=form.keep.filter(a=>a.kind==="image").map(a=>chip(a.name||"image","assets/files/"+a.id,`data-rk="${esc(a.id)}"`)).join("")+form.newImgs.map((f,i)=>chip(f.name,thumbURL(f),`data-ri="${i}"`)).join("");
+  $("#nfImgList").innerHTML=form.keep.filter(a=>a.kind==="image").map(a=>chip(a.name||"image",assetUrl(a.id),`data-rk="${esc(a.id)}"`)).join("")+form.newImgs.map((f,i)=>chip(f.name,thumbURL(f),`data-ri="${i}"`)).join("");
   $("#mBody").querySelectorAll("[data-rk]").forEach(b=>b.onclick=()=>{ form.removed.push(b.dataset.rk); form.keep=form.keep.filter(a=>a.id!==b.dataset.rk); drawFiles(); });
   $("#mBody").querySelectorAll("[data-rp]").forEach(b=>b.onclick=()=>{ form.newPdfs.splice(+b.dataset.rp,1); drawFiles(); });
   $("#mBody").querySelectorAll("[data-ri]").forEach(b=>b.onclick=()=>{ form.newImgs.splice(+b.dataset.ri,1); drawFiles(); });
@@ -2892,6 +2892,8 @@ setInterval(()=>{ renderWatch(); watchTick(); },1000);
 Object.assign(T.en,{snapNote:"Read-only copy saved on {d}. Live updates, AI features and saving work only inside Claude."});
 Object.assign(T.ar,{snapNote:"نسخة للعرض فقط محفوظة بتاريخ {d}. التحديث المباشر وميزات الذكاء الاصطناعي والحفظ تعمل داخل Claude فقط."});
 let SNAP_MODE=false, SNAP_AT=0, SNAP_PARTS={};
+const ASSET_FILES={};
+const assetUrl=id=>ASSET_FILES[id]||("assets/files/"+id);
 /* Inside Claude files go through the platform's save dialog; elsewhere (GitHub Pages) a normal browser download. */
 async function saveFile(name,data){
   if(downloads) return downloads.save({filename:name,data});
