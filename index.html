@@ -1,7 +1,7 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>ACIS Security Analysis</title>
-<link rel="icon" type="image/png" href="/_blob/bbc1c4ba434efe257939f45b4774f7f0">
-<link rel="apple-touch-icon" href="/_blob/bbc1c4ba434efe257939f45b4774f7f0">
+<link rel="icon" type="image/png" href="assets/app-icon.png">
+<link rel="apple-touch-icon" href="assets/app-icon.png">
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,17 +354,17 @@ main{padding-block:18px 40px}
 
 <div class="plate">
   <div class="wrap">
-    <img src="/_blob/5be0d5253729ae85226128d7500f2982" alt="Government of Dubai — حكومة دبي">
+    <img src="assets/logo-government-of-dubai.png" alt="Government of Dubai — حكومة دبي">
     <div class="right">
-      <img class="acis" src="/_blob/b1dcdf8a583754ef7bfec3a744dc1ff8" alt="Authorities & Critical Infrastructure Security — إدارة أمن الهيئات والمنشآت الحيوية">
-      <img src="/_blob/5438a066ac0b2abe6f9b3b0d7851c092" alt="Dubai Police — شرطة دبي">
+      <img class="acis" src="assets/logo-acis.png" alt="Authorities & Critical Infrastructure Security — إدارة أمن الهيئات والمنشآت الحيوية">
+      <img src="assets/logo-dubai-police.png" alt="Dubai Police — شرطة دبي">
     </div>
   </div>
 </div>
 
 <div class="bar">
   <div class="wrap">
-    <div class="brandwrap"><img class="appicon" src="/_blob/bbc1c4ba434efe257939f45b4774f7f0" alt="" width="42" height="42"><div class="brand"><b data-t="appName"></b><span data-t="appSub"></span></div></div>
+    <div class="brandwrap"><img class="appicon" src="assets/app-icon.png" alt="" width="42" height="42"><div class="brand"><b data-t="appName"></b><span data-t="appSub"></span></div></div>
     <div class="nav" role="tablist">
       <button role="tab" id="tab-countries" data-view="countries" aria-selected="true" data-t="navCountries"></button>
       <button role="tab" id="tab-forecasts" data-view="forecasts" aria-selected="false" data-t="navFc"></button>
@@ -830,14 +830,14 @@ function itemHTML(n,opts={}){
     ${sum&&orig?`<details><summary>${esc(t("sourceText"))}</summary><div dir="auto">${esc(orig)}</div></details>`:""}
     ${(n.verify==="confirmed"||n.verify==="unconfirmed")&&L(n,"verifyNote")?`<div class="vnote ${n.verify}" dir="auto">${esc(L(n,"verifyNote"))}</div>`:""}
     ${n.sources&&n.sources.length>1?`<details><summary>${esc(t("srcList"))} (${n.sources.length})</summary><div>${n.sources.map(x=>x.link?`<a class="srclink" href="${esc(safeUrl(x.link))}" target="_blank" rel="noopener">${esc(x.name||x.link)}</a>`:esc(x.name||"")).join("<br>")}</div></details>`:""}
-    ${(imgs.length||pdfs.length)?`<div class="att">${imgs.map(a=>`<button class="thumb" data-img="${esc(a.id)}" aria-label="${esc(a.name||"image")}"><img src="/_blob/${esc(a.id)}" alt="" loading="lazy"></button>`).join("")}${pdfs.map(a=>`<a class="pdf" href="/_blob/${esc(a.id)}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg><span>${esc(a.name||"PDF")}</span></a>`).join("")}</div>`:""}
+    ${(imgs.length||pdfs.length)?`<div class="att">${imgs.map(a=>`<button class="thumb" data-img="${esc(a.id)}" aria-label="${esc(a.name||"image")}"><img src="assets/files/${esc(a.id)}" alt="" loading="lazy"></button>`).join("")}${pdfs.map(a=>`<a class="pdf" href="assets/files/${esc(a.id)}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg><span>${esc(a.name||"PDF")}</span></a>`).join("")}</div>`:""}
     <div class="acts"><button class="sharebtn" data-share="${n.id}" aria-label="${esc(t("share"))}">${SHAREIC}${esc(t("share"))}</button><button class="fcbtn" data-fc="${n.id}">${SPARKSM}${esc(t("fcNewsBtn"))}</button>${isOwner&&n.verify!=="confirmed"&&n.verify!=="checking"?`<button data-verify="${n.id}">${esc(t("verifyBtn"))}</button>`:""}${isOwner&&n.mergedFrom&&n.mergedFrom.length?`<button data-unmerge="${n.id}">${esc(t("unmergeBtn"))}</button>`:""}${isOwner?`<button data-edit="${n.id}">${esc(t("edit"))}</button><button data-del="${n.id}">${esc(t("del"))}</button>`:""}</div>
   </article>`;
 }
 const safeUrl=u=>/^https?:\/\//i.test(u||"")?u:"#";
 function wireItems(root){
   root.querySelectorAll(".more").forEach(b=>b.onclick=()=>{ const it=b.closest(".item"); it.classList.toggle("open"); b.textContent=it.classList.contains("open")?t("readLess"):t("readMore"); });
-  root.querySelectorAll("[data-img]").forEach(b=>b.onclick=()=>{ $("#lbImg").src="/_blob/"+b.dataset.img; $("#lightbox").hidden=false; });
+  root.querySelectorAll("[data-img]").forEach(b=>b.onclick=()=>{ $("#lbImg").src="assets/files/"+b.dataset.img; $("#lightbox").hidden=false; });
   root.querySelectorAll("[data-edit]").forEach(b=>b.onclick=()=>openNewsForm(news.find(n=>n.id===b.dataset.edit)));
   root.querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>confirmDelete(t("confirmDel"),()=>deleteNews(b.dataset.del)));
   root.querySelectorAll("[data-fc]").forEach(b=>b.onclick=()=>fcNewsClick(b.dataset.fc));
@@ -1044,7 +1044,7 @@ const blobToDataURL=b=>new Promise((res,rej)=>{ const r=new FileReader(); r.onlo
 async function inlineImages(n){
   const out=[];
   for(const a of normNews(n).imgs){
-    try{ const r=await fetch("/_blob/"+a.id); if(!r.ok) continue; out.push(await blobToDataURL(await r.blob())); }catch(_){}
+    try{ const r=await fetch("assets/files/"+a.id); if(!r.ok) continue; out.push(await blobToDataURL(await r.blob())); }catch(_){}
   }
   return out;
 }
@@ -1120,7 +1120,7 @@ async function phoneCanvas(n){
   const v=normNews(n);
   await docFonts();
   const [gov,acis,police]=await Promise.all([LOGOS.gov,LOGOS.acis,LOGOS.police].map(loadImg));
-  const atts=(await Promise.all(v.imgs.map(a=>loadImg("/_blob/"+a.id)))).filter(Boolean);
+  const atts=(await Promise.all(v.imgs.map(a=>loadImg("assets/files/"+a.id)))).filter(Boolean);
   const meas=document.createElement("canvas").getContext("2d");
   const font=(px,wt)=>`${wt||400} ${px}px ${PH_FONT}`;
   const W=PH.W, X0=PH.pad, CW=W-2*PH.pad, IW=CW-2*PH.cardPad;
@@ -1239,11 +1239,10 @@ function openShare(n){
   const msg=(s,err)=>{ const m=$("#shMsg"); if(m){ m.textContent=s||""; m.className="msg"+(err?" err":""); } };
   const busy=on=>$("#mBody")&&$("#mBody").querySelectorAll(".shareopt").forEach(b=>b.disabled=on);
   const save=async(make,ext)=>{
-    if(!downloads){ msg(t("exportFail"),true); return; }
     busy(true); msg(t("preparing"));
     try{
       const data=await make();
-      await downloads.save({filename:fileBase(n)+ext,data});
+      await saveFile(fileBase(n)+ext,data);
       msg(t("fileReady")); toast(t("fileReady"));
     }catch(e){ console.warn(e); if(e&&e.code==="declined") msg(""); else msg(t("exportFail"),true); }
     finally{ busy(false); }
@@ -1367,7 +1366,7 @@ const thumbURL=f=>{ if(!objURLs.has(f)) objURLs.set(f,URL.createObjectURL(f)); r
 function drawFiles(){
   const chip=(label,img,attr)=>`<span class="fileitem">${img?`<img src="${img}" alt="">`:""}<span>${esc(label)}</span><button type="button" ${attr} aria-label="Remove">×</button></span>`;
   $("#nfPdfList").innerHTML=form.keep.filter(a=>a.kind==="pdf").map(a=>chip(a.name||"PDF","",`data-rk="${esc(a.id)}"`)).join("")+form.newPdfs.map((f,i)=>chip(f.name,"",`data-rp="${i}"`)).join("");
-  $("#nfImgList").innerHTML=form.keep.filter(a=>a.kind==="image").map(a=>chip(a.name||"image","/_blob/"+a.id,`data-rk="${esc(a.id)}"`)).join("")+form.newImgs.map((f,i)=>chip(f.name,thumbURL(f),`data-ri="${i}"`)).join("");
+  $("#nfImgList").innerHTML=form.keep.filter(a=>a.kind==="image").map(a=>chip(a.name||"image","assets/files/"+a.id,`data-rk="${esc(a.id)}"`)).join("")+form.newImgs.map((f,i)=>chip(f.name,thumbURL(f),`data-ri="${i}"`)).join("");
   $("#mBody").querySelectorAll("[data-rk]").forEach(b=>b.onclick=()=>{ form.removed.push(b.dataset.rk); form.keep=form.keep.filter(a=>a.id!==b.dataset.rk); drawFiles(); });
   $("#mBody").querySelectorAll("[data-rp]").forEach(b=>b.onclick=()=>{ form.newPdfs.splice(+b.dataset.rp,1); drawFiles(); });
   $("#mBody").querySelectorAll("[data-ri]").forEach(b=>b.onclick=()=>{ form.newImgs.splice(+b.dataset.ri,1); drawFiles(); });
@@ -1921,7 +1920,8 @@ const partCache=new Map();
 let syncBusy=false, syncAgain=false, syncTimer=null;
 function scheduleSync(){ if(!isOwner||!db) return; clearTimeout(syncTimer); syncTimer=setTimeout(syncWeeks,2500); }
 async function loadParts(w){
-  const d=weekDocs[w]; if(!db||!d||!d.parts) return [];
+  const d=weekDocs[w]; if(!d||!d.parts) return [];
+  if(!db){ const out=[]; for(let i=0;i<d.parts;i++){ const p=SNAP_PARTS[`${w}-p${i}`]; if(p&&Array.isArray(p.items)) out.push(...p.items); } return out; }
   const snaps=await Promise.all(Array.from({length:d.parts},(_,i)=>db.doc(`weekparts/${w}-p${i}`).get().catch(()=>null)));
   const out=[]; snaps.forEach(s=>{ const it=s&&s.exists&&s.data()&&s.data().items; if(Array.isArray(it)) out.push(...it); }); return out;
 }
@@ -2022,7 +2022,7 @@ Object.assign(T.ar,{exContent:"المحتوى",exFull:"الملف كاملاً",
   exHint:"يُرسم النص العربي كما يظهر على الشاشة تماماً، فتبقى الحروف متصلة وواضحة على كل الأجهزة.",
   pageOf:"صفحة {n} من {t}",docFoot:"إدارة أمن الهيئات والمنشآت الحيوية · شرطة دبي",linkDubai:"الصلة بدبي: ",reviewedByL:"تمت المراجعة من"});
 
-const LOGO_SRC={gov:"/_blob/5be0d5253729ae85226128d7500f2982",acis:"/_blob/b1dcdf8a583754ef7bfec3a744dc1ff8",police:"/_blob/5438a066ac0b2abe6f9b3b0d7851c092"};
+const LOGO_SRC={gov:"assets/logo-government-of-dubai.png",acis:"assets/logo-acis.png",police:"assets/logo-dubai-police.png"};
 /* Smaller copies of the official logos for files that must open offline (phone HTML export). */
 (async()=>{ for(const k of ["gov","acis","police"]){ try{ const im=await loadImg(LOGO_SRC[k]); if(!im) continue; const h=180, w=Math.round(im.naturalWidth*h/im.naturalHeight); const cv=document.createElement("canvas"); cv.width=w; cv.height=h; const c=cv.getContext("2d"); c.imageSmoothingQuality="high"; c.drawImage(im,0,0,w,h); LOGOS[k]=cv.toDataURL("image/png"); }catch(_){} } })();
 
@@ -2233,10 +2233,9 @@ function openExport(o){
       if(kind==="copy"){ const txt=docText(doc); let ok=false; try{ await navigator.clipboard.writeText(txt); ok=true; }catch(_){}
         if(!ok){ const ta=document.createElement("textarea"); ta.value=txt; ta.setAttribute("readonly",""); ta.style.cssText="position:fixed;top:0;left:0;opacity:0"; document.body.appendChild(ta); ta.select(); try{ ok=document.execCommand("copy"); }catch(__){} ta.remove(); }
         msg(ok?t("copied"):t("shareFail"),!ok); if(ok) toast(t("copied")); return; }
-      if(!downloads) throw new Error("no-downloads");
       const data=kind==="png"?await docPng(doc,theme,el):await docPdf(doc,kind,theme,el);
       const suffix=(o.variants&&variant==="brief"?"Summary-":"")+(kind==="phone"?"Mobile":kind==="a4"?"A4":"Image")+(el==="ar"?"-AR":"-EN")+(theme==="dark"?"-Dark":"");
-      await downloads.save({filename:`${o.file}-${suffix}.${kind==="png"?"png":"pdf"}`,data});
+      await saveFile(`${o.file}-${suffix}.${kind==="png"?"png":"pdf"}`,data);
       msg(t("fileReady")); toast(t("fileReady"));
     }catch(e){ console.warn(e); if(e&&e.code==="declined") msg(""); else if(e&&e.code==="too_long") msg(t("exTooLong"),true); else msg(t("exportFail"),true); }
     finally{ busy(false); }
@@ -2771,9 +2770,9 @@ async function unmergeNews(pid){
 }
 
 /* ---------- Morning brief ---------- */
-const mk=()=>`morning-${todayStr()}`;
+const mk=()=>SNAP_MODE?(Object.keys(briefs).filter(k=>k.startsWith("morning-")).sort().pop()||`morning-${todayStr()}`):`morning-${todayStr()}`;
 let morningBusy=false, morningTried=false, morningErr="", briefsLive=false, mnOpen=false; const BOOT_AT=Date.now();
-function morningItems(){ const since=Date.now()-864e5, y=addDays(todayStr(),-1); return news.filter(n=>(n.createdAt||0)>=since||n.date>=y).sort(bySev); }
+function morningItems(){ const ref=SNAP_MODE&&SNAP_AT?SNAP_AT:Date.now(), since=ref-864e5, y=addDays(todayStr(new Date(ref)),-1); return news.filter(n=>(n.createdAt||0)>=since||n.date>=y).sort(bySev); }
 function renderMorning(){
   const box=$("#morning"); if(!box) return;
   const br=briefs[mk()], txt=br?L(br,"text"):"";
@@ -2889,6 +2888,31 @@ $("#watchBtn").onclick=()=>{ watchOn=!watchOn; store("acis.watch",watchOn?"1":"0
 document.addEventListener("visibilitychange",renderWatch);
 setInterval(()=>{ renderWatch(); watchTick(); },1000);
 
+/* ---------- GitHub copy: read-only snapshot when the page runs outside Claude ---------- */
+Object.assign(T.en,{snapNote:"Read-only copy saved on {d}. Live updates, AI features and saving work only inside Claude."});
+Object.assign(T.ar,{snapNote:"نسخة للعرض فقط محفوظة بتاريخ {d}. التحديث المباشر وميزات الذكاء الاصطناعي والحفظ تعمل داخل Claude فقط."});
+let SNAP_MODE=false, SNAP_AT=0, SNAP_PARTS={};
+/* Inside Claude files go through the platform's save dialog; elsewhere (GitHub Pages) a normal browser download. */
+async function saveFile(name,data){
+  if(downloads) return downloads.save({filename:name,data});
+  const blob=data instanceof Blob?data:new Blob([data]); const url=URL.createObjectURL(blob);
+  const a=document.createElement("a"); a.href=url; a.download=name; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(url),4000);
+  return {status:"saved"};
+}
+async function loadSnapshot(){
+  try{
+    const r=await fetch("data/snapshot.json",{cache:"no-store"}); if(!r.ok) throw new Error("snapshot "+r.status);
+    const S=await r.json();
+    SNAP_MODE=true; SNAP_AT=+S.exportedAt||Date.now(); SNAP_PARTS=S.weekparts||{};
+    newsAll=(S.news||[]).filter(n=>n&&n.country&&n.severity); news=newsAll.filter(n=>!n.mergedInto);
+    threats=S.countries||{}; briefs=S.briefs||{}; weekDocs=S.weeks||{}; reviews=S.reviews||{};
+    forecasts=(S.forecasts||[]).filter(f=>f&&f.createdAt&&Array.isArray(f.scenarios)&&f.confidence&&f.dubai).sort((a,b)=>b.createdAt-a.createdAt);
+    metaUpd=(S.meta&&S.meta.update)||null; isOwner=false; document.body.classList.remove("is-owner");
+    status(fill(t("snapNote"),{d:fmtTs(SNAP_AT)}));
+    renderAll();
+  }catch(e){ console.warn(e); status(t("noDb")); renderAll(); }
+}
+
 /* ---------- Render / boot ---------- */
 function renderAll(){ renderBoard(); renderFeed(); paintMap(); renderDubai(); renderAlerts(); renderOps(); renderUpd(); renderWeeks(); renderFcHome(); renderFcView(); renderWatch(); renderMorning(); renderDupBar(); renderSearch(); if(!$("#view-ask").hidden) renderAsk(); if(selected) renderCountry(); if(!$("#view-briefings").hidden&&!execEditing) renderBriefing(); else if(!$("#view-briefings").hidden){ renderReview(); } }
 function status(m){ const s=$("#status"); if(m){ s.textContent=m; s.hidden=false; } else s.hidden=true; }
@@ -2896,7 +2920,7 @@ function status(m){ const s=$("#status"); if(m){ s.textContent=m; s.hidden=false
 applyUi(); applyLang(); loadMap();
 showView(VIEWS.includes(location.hash.slice(1))?location.hash.slice(1):"countries");
 (async()=>{
-  if(!window.claude||!window.claude.use){ status(t("noDb")); return; }
+  if(!window.claude||!window.claude.use){ await loadSnapshot(); return; }
   status(t("connecting"));
   const [dbNs,uNs,aNs,dNs,sNs,mNs]=await Promise.all(["db","user","assets","downloads","sample","mcp"].map(n=>window.claude.use(n).catch(()=>null)));
   db=dbNs; userNs=uNs; assets=aNs; downloads=dNs; sample=sNs; mcp=mNs;
@@ -2904,7 +2928,7 @@ showView(VIEWS.includes(location.hash.slice(1))?location.hash.slice(1):"countrie
   if(userNs){ try{ isOwner=(await userNs.isOwner())||(await userNs.canEdit()); }catch(_){ isOwner=false; } try{ myId=await userNs.id(); }catch(_){ myId=null; } }
   else isOwner=true;
   document.body.classList.toggle("is-owner",isOwner);
-  if(!db){ status(t("noDb")); renderAll(); return; }
+  if(!db){ await loadSnapshot(); return; }
   const got={news:false,countries:false};
   const timer=setTimeout(()=>{ if(!got.news||!got.countries) status(t("offline")); },10000);
   const done=k=>{ got[k]=true; if(got.news&&got.countries){ clearTimeout(timer); status(""); } };
@@ -3119,8 +3143,8 @@ showView(VIEWS.includes(location.hash.slice(1))?location.hash.slice(1):"countrie
 @media (max-width:640px){.nav button{white-space:normal;line-height:1.25;font-size:13px}.wk-a{width:100%}.wk-a .btn{flex:1}.tools{flex-wrap:wrap;justify-content:flex-end;min-width:0}#updBtn{white-space:nowrap}}
 
 /* ---- Official font: 29LT Bukra ---- */
-@font-face{font-family:"29LT Bukra";src:url("/_blob/734c32606cfc02dc09c0a64d0f967153") format("opentype");font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:"29LT Bukra";src:url("/_blob/6a9980a112c35901d776637443351268") format("opentype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"29LT Bukra";src:url("assets/fonts/29LT-Bukra-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"29LT Bukra";src:url("assets/fonts/29LT-Bukra-Bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap}
 :root{--f-display:"29LT Bukra","Noto Kufi Arabic","IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;--f-body:"29LT Bukra","IBM Plex Sans Arabic","Segoe UI",Tahoma,system-ui,sans-serif}
 
 /* ---- Forecasts ---- */
