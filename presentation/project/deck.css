@@ -59,6 +59,15 @@ h1, h2, h3 { font-family: 'Bukra Bold', Tahoma, sans-serif; font-weight: 400; ma
 .foot-t { font-size: 24px; color: #7F958E; margin: 0; }
 .pg::after { content: counter(page); }
 
+/* ---------- prepared-by credit (small, centred at the foot of every slide) ---------- */
+.credit { display: flex; flex-direction: row-reverse; align-items: center; gap: 14px; padding: 6px 22px; border: 1px solid rgba(217, 174, 91, 0.35); border-radius: 999px; background: rgba(217, 174, 91, 0.06); }
+.credit .credit-l { font-size: 24px; color: var(--gold); margin: 0; }
+.credit-bar { width: 1px; height: 22px; background: rgba(217, 174, 91, 0.55); }
+.credit .credit-n { font-family: 'Bukra Bold', Tahoma, sans-serif; font-size: 24px; color: #D6E2DC; margin: 0; white-space: nowrap; }
+.foot .foot-t { flex: 1; }
+.foot .pg { text-align: left; }
+.credit-pin { position: absolute; left: 112px; bottom: 44px; width: 1696px; display: flex; flex-direction: row-reverse; justify-content: center; animation: fadeIn 800ms ease-out 900ms both; }
+
 /* ---------- points ---------- */
 .pts { display: flex; flex-direction: column; gap: 22px; }
 .pts2 { display: flex; flex-direction: row-reverse; flex-wrap: wrap; gap: 26px 64px; }
