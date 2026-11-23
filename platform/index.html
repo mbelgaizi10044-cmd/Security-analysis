@@ -45,6 +45,7 @@ button{cursor:pointer}
 .wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));max-width:1500px;margin:0 auto}
 
 .plate{background:transparent}
+#fsBtn .fs-out{display:none} body.is-fs #fsBtn .fs-in{display:none} body.is-fs #fsBtn .fs-out{display:inline}
 :root[data-ui="light"] .plate img{filter:brightness(0);opacity:.86}
 .plate .wrap{direction:ltr;display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
 .plate img{display:block;height:46px;width:auto;max-width:none;object-fit:contain}
@@ -379,6 +380,7 @@ main{padding-block:18px 40px}
     <div class="tools">
       <button class="chipbtn owner-only addmini" id="addNewsTop" title="إضافة خبر يدوياً · Add news manually" aria-label="إضافة خبر يدوياً · Add news manually"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg><span data-t="addNews"></span></button>
       <button class="chipbtn" id="opsBtn" aria-label="Operations room"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><path d="m6.5 13 3-3.5 2.5 2 4-4.5 1.5 1.5"/></svg><span data-t="opsBtn"></span></button>
+      <button class="chipbtn" id="fsBtn" aria-label="Full screen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="fs-in" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/><path class="fs-out" d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg><span id="fsLbl"></span></button>
       <button class="chipbtn" id="langBtn"></button>
       <button class="chipbtn" id="themeBtn" aria-label="Theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
     </div>
@@ -1800,16 +1802,28 @@ $("#askReset").onclick=()=>{ if(askCtl) try{ askCtl.abort(); }catch(_){} askHist
 /* ---------- Operations room ---------- */
 let opsOn=false, opsTimer=null, opsClock=null, opsIdx=0;
 function opsSpotList(){ return Object.entries(threats).filter(([c,th])=>ISOSET.has(c)&&(th.level==="critical"||th.level==="high")).sort((a,b)=>SEVN[b[1].level]-SEVN[a[1].level]||(b[1].trend==="up")-(a[1].trend==="up")).map(([c])=>c); }
+/* ---------- Full screen: the whole platform covers the screen, nothing else showing ---------- */
+Object.assign(T.en,{fsOpen:"Full screen",fsExit:"Exit full screen",fsNo:"This device doesn't allow full screen from a web page. On iPhone, add the platform to the Home Screen to open it without the browser bars."});
+Object.assign(T.ar,{fsOpen:"ملء الشاشة",fsExit:"الخروج من ملء الشاشة",fsNo:"هذا الجهاز لا يسمح بملء الشاشة من صفحة ويب. على الآيفون أضيفي المنصة إلى الشاشة الرئيسية لتفتح بدون أشرطة المتصفح."});
+const fsEl=()=>document.fullscreenElement||document.webkitFullscreenElement||null;
+function fsEnter(el){ const f=el.requestFullscreen||el.webkitRequestFullscreen; if(!f) return false;
+  try{ const r=f.call(el,{navigationUI:"hide"}); if(r&&r.catch) r.catch(()=>{ if(el===document.documentElement) toast(t("fsNo")); }); return true; }catch(_){ return false; } }
+function fsExit(){ try{ const f=document.exitFullscreen||document.webkitExitFullscreen; if(fsEl()&&f){ const r=f.call(document); if(r&&r.catch) r.catch(()=>{}); } }catch(_){} }
+function fsSync(){ const on=fsEl()===document.documentElement; document.body.classList.toggle("is-fs",on); const l=$("#fsLbl"); if(l) l.textContent=t(on?"fsExit":"fsOpen"); const b=$("#fsBtn"); if(b) b.setAttribute("aria-label",t(on?"fsExit":"fsOpen")); }
+document.addEventListener("fullscreenchange",fsSync); document.addEventListener("webkitfullscreenchange",fsSync);
+$("#fsBtn").onclick=()=>{ if(fsEl()) fsExit(); else if(!fsEnter(document.documentElement)) toast(t("fsNo")); };
+$("#langBtn").addEventListener("click",()=>setTimeout(fsSync,0));
+fsSync();
 function openOps(){
   opsOn=true; const o=$("#ops"); o.hidden=false; document.body.style.overflow="hidden";
-  try{ const r=o.requestFullscreen&&o.requestFullscreen(); if(r&&r.catch) r.catch(()=>{}); }catch(_){}
+  if(!fsEl()) fsEnter(o);  /* already full screen (platform button): the room simply covers it */
   if(mapData&&!$("#opsMap").childElementCount){ const ns="http://www.w3.org/2000/svg", g=document.createElementNS(ns,"g"); $("#opsMap").setAttribute("viewBox",`0 0 ${mapData.width||900} ${mapData.height||440}`);
     for(const [code,p] of Object.entries(mapData.paths)){ const el=document.createElementNS(ns,"path"); el.setAttribute("d",p.path); el.dataset.oc=code.toUpperCase(); g.appendChild(el); } $("#opsMap").appendChild(g); }
   const tick=()=>{ try{ $("#opsTime").textContent=new Intl.DateTimeFormat(LOC(),{hour:"2-digit",minute:"2-digit",second:"2-digit",timeZone:"Asia/Dubai"}).format(new Date()); $("#opsDate").textContent=new Intl.DateTimeFormat(LOC(),{weekday:"long",day:"numeric",month:"long",year:"numeric",timeZone:"Asia/Dubai"}).format(new Date()); }catch(_){} };
   tick(); clearInterval(opsClock); opsClock=setInterval(tick,1000);
   opsIdx=0; renderOps(); clearInterval(opsTimer); opsTimer=setInterval(()=>{ opsIdx++; renderOpsSpot(); },9000);
 }
-function closeOps(){ opsOn=false; $("#ops").hidden=true; document.body.style.overflow=""; clearInterval(opsTimer); clearInterval(opsClock); try{ if(document.fullscreenElement) document.exitFullscreen().catch(()=>{}); }catch(_){} }
+function closeOps(){ opsOn=false; $("#ops").hidden=true; document.body.style.overflow=""; clearInterval(opsTimer); clearInterval(opsClock); if(fsEl()===$("#ops")) fsExit(); }
 function renderOps(){
   if(!opsOn) return; const rc=recentByCountry(), d1=addDays(todayStr(),-1), d7=addDays(todayStr(),-6);
   $("#opsMap").querySelectorAll("path").forEach(p=>{ const c=p.dataset.oc, lv=levelOf(c,rc); let cls=lv?"sev-"+lv:""; if(c==="AE") cls+=" uae"; p.setAttribute("class",cls.trim()); });
