@@ -1,0 +1,20 @@
+{
+  "assets": {},
+  "db": {
+    "rules": [
+      { "path": "news",           "read": "view", "write": "admin" },
+      { "path": "countries",      "read": "view", "write": "admin" },
+      { "path": "briefs",         "read": "view", "write": "admin" },
+      { "path": "reviews",        "read": "view", "write": "admin" },
+      { "path": "reviews/{self}", "read": "view", "write": "interact" },
+      { "path": "meta",           "read": "view", "write": "admin" },
+      { "path": "weeks",          "read": "view", "write": "admin" },
+      { "path": "weekparts",      "read": "view", "write": "admin" },
+      { "path": "forecasts",      "read": "view", "write": "admin" }
+    ]
+  },
+  "downloads": {},
+  "mcp": { "servers": [ { "server": "Parallel Search", "tools": ["web_search"] } ] },
+  "sample": { "images": true },
+  "user": { "scopes": ["profile"] }
+}
