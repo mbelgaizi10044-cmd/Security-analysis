@@ -311,7 +311,7 @@ main{padding-block:18px 40px}
 /* PDF render source */
 #report{position:fixed;left:-10000px;top:0;width:794px;background:#fff;color:#14202B;font-family:var(--f-body);padding:0 0 30px}
 #report .rp-plate{background:#fff;border-bottom:1px solid #DDD7CC;display:flex;justify-content:space-between;align-items:center;padding:16px 34px;direction:ltr}
-#report .rp-plate img{height:52px;max-width:none;filter:brightness(0);opacity:.86}
+#report .rp-plate img{height:52px;max-width:none}
 #report .rp-plate .r{display:flex;gap:22px;align-items:center}
 #report .rp-plate .acis{height:44px}
 #report .rp-h{padding:22px 34px 12px;border-bottom:2px solid #1E7A4F}
@@ -537,7 +537,7 @@ main{padding-block:18px 40px}
 (() => {
 "use strict";
 const _pl=document.querySelectorAll(".plate img");
-const LOGOS={gov:_pl[0].src, acis:_pl[1].src, police:_pl[2].src};
+const LOGOS={...{gov:"assets/logo-government-of-dubai-color.png",acis:"assets/logo-acis-color.png",police:"assets/logo-dubai-police-color.png"}};  /* coloured logos for downloads; replaced by embedded copies once loaded */
 
 /* ---------- i18n ---------- */
 const T={
@@ -1062,10 +1062,9 @@ const PHCSS=`.ph{background:#FFFFFF;color:#14202B;font-family:"IBM Plex Sans Ara
 .ph *{box-sizing:border-box}
 .ph .wrap{width:100%;max-width:640px;margin:0 auto;padding:16px}
 .ph .plate{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 14px;direction:ltr;padding:4px 0 12px;border-bottom:1px solid #DDD7CC}
-.ph .plate img{display:block;height:30px;width:auto;max-width:100%;filter:brightness(0);opacity:.86}
+.ph .plate img{display:block;height:30px;width:auto;max-width:100%}
 .ph .plate .r{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .ph .plate .r img{height:26px}
-.ph .plate .r img[alt="ACIS"]{height:20px}
 .ph .tag{padding-top:14px;font-size:12.5px;color:#566370;font-weight:600;line-height:1.5}
 .ph .card{background:#FFFFFF;border:1px solid #DDD7CC;border-radius:14px;padding:16px 16px 18px;margin-top:12px}
 .ph .meta{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;font-size:13px;color:#566370;line-height:1.6}
@@ -1133,7 +1132,7 @@ const rrect=(ctx,x,y,w,h,r)=>{ ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w
 async function phoneCanvas(n){
   const v=normNews(n);
   await docFonts();
-  const [gov,acis,police]=(await Promise.all([LOGOS.gov,LOGOS.acis,LOGOS.police].map(loadImg))).map(im=>inkLogo(im,PH.ink));
+  const [gov,acis,police]=(await Promise.all([LOGOS.gov,LOGOS.acis,LOGOS.police].map(loadImg)));
   const atts=(await Promise.all(v.imgs.map(a=>loadImg(assetUrl(a.id))))).filter(Boolean);
   const meas=document.createElement("canvas").getContext("2d");
   const font=(px,wt)=>`${wt||400} ${px}px ${PH_FONT}`;
@@ -1857,7 +1856,7 @@ $("#opsExit").onclick=closeOps;
 document.addEventListener("keydown",e=>{ if(e.key==="Escape"&&opsOn){ e.stopImmediatePropagation(); closeOps(); } },true);
 document.addEventListener("keydown",e=>{ if(e.key==="/"&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)&&$("#scrim").hidden&&!opsOn&&!$("#view-countries").hidden){ e.preventDefault(); $("#q").focus(); } });
 
-$("#opsGov").src=LOGOS.gov; $("#opsAcis").src=LOGOS.acis; $("#opsPolice").src=LOGOS.police;
+$("#opsGov").src=_pl[0].src; $("#opsAcis").src=_pl[1].src; $("#opsPolice").src=_pl[2].src;
 
 /* ---------- Update now · automatic updates · weekly archive ---------- */
 Object.assign(T.en,{updBtn:"Update now",updRunning:"Updating… {i}/{n}",updDone:"Updated: {n} new entries from {c} countries.",updNone:"Updated: nothing new.",
@@ -2048,7 +2047,8 @@ Object.assign(T.ar,{exContent:"المحتوى",exFull:"الملف كاملاً",
   exHint:"يُرسم النص العربي كما يظهر على الشاشة تماماً، فتبقى الحروف متصلة وواضحة على كل الأجهزة.",
   pageOf:"صفحة {n} من {t}",docFoot:"إدارة أمن الهيئات والمنشآت الحيوية · شرطة دبي",linkDubai:"الصلة بدبي: ",reviewedByL:"تمت المراجعة من"});
 
-const LOGO_SRC={gov:"assets/logo-government-of-dubai.png",acis:"assets/logo-acis.png",police:"assets/logo-dubai-police.png"};
+/* Downloads and reports carry the original coloured logos (the screen header uses the white ones). */
+const LOGO_SRC={gov:"assets/logo-government-of-dubai-color.png",acis:"assets/logo-acis-color.png",police:"assets/logo-dubai-police-color.png"};
 /* Smaller copies of the official logos for files that must open offline (phone HTML export). */
 (async()=>{ for(const k of ["gov","acis","police"]){ try{ const im=await loadImg(LOGO_SRC[k]); if(!im) continue; const h=180, w=Math.round(im.naturalWidth*h/im.naturalHeight); const cv=document.createElement("canvas"); cv.width=w; cv.height=h; const c=cv.getContext("2d"); c.imageSmoothingQuality="high"; c.drawImage(im,0,0,w,h); LOGOS[k]=cv.toDataURL("image/png"); }catch(_){} } })();
 
@@ -2099,7 +2099,7 @@ const cardOf=(G,tone)=>tone==="gold"?{pad:14,bg:G.pal.goldBg,border:G.pal.gold,r
 /* Block builders. Each block: {mt, keepNext, make(G)→{rows, card}, txt}. */
 const DB={
   plate:()=>({plate:true,mt:0,txt:"",make:G=>{ const lh=G.fmt.name==="phone"?34:40, band=lh+28*G.k;
-    return {rows:[{h:band+8*G.k,draw:(c,x,y)=>{ c.fillStyle=G.pal.line; c.fillRect(G.M,y+band-1,G.W-2*G.M,1);
+    return {rows:[{h:band+8*G.k,draw:(c,x,y)=>{ if(!G.logos.light){ c.fillStyle="#FFFFFF"; c.fillRect(0,y,G.W,band); } else { c.fillStyle=G.pal.line; c.fillRect(G.M,y+band-1,G.W-2*G.M,1); }
       const lg=G.logos; c.imageSmoothingQuality="high"; let right=G.W-G.M; const hP=lh*.9;
       if(lg.police){ const w2=lg.police.naturalWidth*hP/lg.police.naturalHeight; c.drawImage(lg.police,right-w2,y+(band-hP)/2,w2,hP); right-=w2+12*G.k; }
       const govW=lg.gov?lg.gov.naturalWidth*lh/lg.gov.naturalHeight:0; if(lg.gov) c.drawImage(lg.gov,G.M,y+(band-lh)/2,govW,lh);
@@ -2190,8 +2190,8 @@ function layoutDoc(doc,fmt,pal,l,unbounded,logos){
 }
 async function docLogos(pal){ const o={}; const light=!pal||pal.bg==="#FFFFFF";
   for(const k of ["gov","acis","police"]){ const im=await loadImg(LOGO_SRC[k])||await loadImg(LOGOS[k]); if(!im) continue;
-    o[k]=light?inkLogo(im,pal.ink):im; }
-  return o; }
+    o[k]=im; }
+  o.light=light; return o; }
 function drawChrome(c,doc,L,fmt,pal,l,p,n,H){
   const k=fmt.k, M=fmt.M, W=fmt.W;
   if(p>0&&H!==Infinity){ c.font=dfont(10.5*k,700); c.fillStyle=pal.muted; c.textBaseline="middle"; const d=l==="ar"?"rtl":"ltr"; c.direction=d; c.textAlign=d==="rtl"?"right":"left"; c.fillText(doc.short||doc.title,d==="rtl"?W-M:M,M*.6+L.headH/2-3*k); c.fillStyle=pal.line; c.fillRect(M,M*.6+L.headH-4*k,W-2*M,1); }
