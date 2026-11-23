@@ -1,5 +1,5 @@
 {
- "exportedAt": 1795414626502,
+ "exportedAt": 1795416491299,
  "source": "ACIS Security Analysis (Claude artifact)",
  "news": [
   {
@@ -1855,6 +1855,28 @@
    "verify": "unconfirmed"
   },
   {
+   "id": "fqr2kiowyd1lpb7y581k",
+   "affectsDubai": false,
+   "attachments": [],
+   "auto": "live",
+   "category": "conflict",
+   "country": "IR",
+   "createdAt": 1795415252782,
+   "date": "2026-11-23",
+   "dubaiNoteAr": "",
+   "dubaiNoteEn": "",
+   "headlineAr": "تقارير: واشنطن ترجئ ضربة محتملة على إيران أسبوعاً على الأقل رغم ضغوط نتنياهو",
+   "headlineEn": "US reportedly postpones Iran strike by at least a week despite Netanyahu pressure",
+   "link": "https://www.iranintl.com/en/liveblog/202611214578",
+   "original": "",
+   "severity": "high",
+   "source": "Iran International",
+   "summaryAr": "أفادت صحيفة «يديعوت» الإلكترونية (واي نت) نقلاً عن مسؤولين في الإدارة الأمريكية يوم الأحد بأن الولايات المتحدة قررت في الوقت الحالي إرجاء أي ضربة عسكرية محتملة على إيران أسبوعاً على الأقل رغم ضغوط رئيس الوزراء الإسرائيلي بنيامين نتنياهو لشن هجوم مشترك. وذكرت قناة i24NEWS نقلاً عن مسؤولين أمنيين إسرائيليين أن القيادة المركزية الأمريكية في أقصى درجات الجاهزية وتدفع باتجاه توجيه ضربة بالتنسيق مع إسرائيل. وقال الرئيس ترامب لقناة «فوكس نيوز» إنه يميل إلى استئناف الضربات بعد رأس السنة إذا لم يتم التوصل إلى اتفاق، محذراً من أن السفن الإيرانية التي تختبر الحصار البحري الأمريكي ستكون «في قاع البحر».",
+   "summaryEn": "Israeli outlet Ynet, citing US administration officials, reported on Sunday that the US decided for now to postpone any potential military strike on Iran by at least a week, despite pressure from Israeli Prime Minister Benjamin Netanyahu for a joint offensive. i24NEWS, citing Israeli security officials, reported that US Central Command is at maximum readiness and pushing for a strike alongside Israel. President Trump told Fox News he was inclined to resume strikes after the new year if no deal is reached, and warned that Iranian ships testing the US naval blockade would 'all be at the bottom of the sea'.",
+   "updatedAt": 1795415252782,
+   "verify": "unconfirmed"
+  },
+  {
    "id": "ft2powjhh0fo3hj27usi",
    "affectsDubai": false,
    "attachments": [],
@@ -2492,6 +2514,28 @@
    "summaryAr": "مددت شركات طيران دولية، منها الخطوط الجوية الفرنسية وإيتا إيرويز والخطوط البريطانية وكاثي باسيفيك، تعليق رحلاتها إلى الرياض مع مواعيد استئناف بين ديسمبر 2026 ويناير 2027. وعلقت إير إنديا وإير إنديا إكسبريس رحلات الرياض والدمام حتى 30 نوفمبر. وحذرت السفارة الأمريكية في المنامة في 16 نوفمبر من هجمات إضافية وإغلاق محتمل للمجال الجوي.",
    "summaryEn": "Several international airlines, including Air France, ITA Airways, British Airways and Cathay Pacific, have extended suspensions of Riyadh services, with return dates from December 2026 to January 2027. Air India and Air India Express suspended Riyadh and Dammam services through 30 November. The US Embassy in Manama warned of possible further attacks and airspace closures on 16 November.",
    "updatedAt": 1795190361752
+  },
+  {
+   "id": "n8mnxuun5qgstmtr5s6f",
+   "affectsDubai": false,
+   "attachments": [],
+   "auto": "live",
+   "category": "terror",
+   "country": "PK",
+   "createdAt": 1795415267220,
+   "date": "2026-11-23",
+   "dubaiNoteAr": "",
+   "dubaiNoteEn": "",
+   "headlineAr": "ضربتان بطائرات مسيّرة تستهدفان جرگة سلام في بانو وإصابة 10 أشخاص",
+   "headlineEn": "Two drone strikes target peace jirga in Bannu, injuring 10",
+   "link": "https://www.pakistantoday.com.pk/category/national",
+   "original": "",
+   "severity": "high",
+   "source": "Pakistan Today",
+   "summaryAr": "أوردت صحيفة باكستان توداي خبراً عن ضربتين بطائرات مسيّرة استهدفتا جرگة سلام في بانو وأسفرتا عن إصابة 10 أشخاص. ولم يتضمن الخبر تفاصيل إضافية بشأن الجهة المنفذة أو الموقع الدقيق، والخبر غير مؤرخ في الصفحة وقد استُنتج تاريخه من قائمة الصفحة بتاريخ 23 نوفمبر.",
+   "summaryEn": "Pakistan Today lists a report that two drone strikes targeted a peace jirga in Bannu, injuring 10 people. The listing gives no further details on perpetrators or exact location, and the item is undated on the page, so its date is inferred from the page's 23 Nov listing.",
+   "updatedAt": 1795415267220,
+   "verify": "unconfirmed"
   },
   {
    "id": "nca024m87nqi0zdd1zdv",
@@ -3441,6 +3485,28 @@
    "updatedAt": 1795190368407
   },
   {
+   "id": "vompvx56rctep3jt9ccq",
+   "affectsDubai": false,
+   "attachments": [],
+   "auto": "live",
+   "category": "conflict",
+   "country": "UA",
+   "createdAt": 1795415276341,
+   "date": "2026-11-23",
+   "dubaiNoteAr": "",
+   "dubaiNoteEn": "",
+   "headlineAr": "ضربة روسية ليلية على بلدة ديمير في منطقة كييف تقتل 11 شخصًا على الأقل وحصيلة المنطقة 15 قتيلًا",
+   "headlineEn": "Russian overnight strike on Dymer, Kyiv region, kills at least 11; Kyiv region toll 15",
+   "link": "https://www.afp.com/en/ukraine-says-russian-strikes-kill-15-kyiv-region",
+   "original": "",
+   "severity": "high",
+   "source": "AFP",
+   "summaryAr": "أفادت وكالة فرانس برس بأن الضربات الروسية أودت بحياة 15 شخصًا في منطقة كييف. وأصابت ضربة ليلية بلدة ديمير الواقعة على بعد نحو 45 كيلومترًا شمال العاصمة مبنى من خمسة طوابق وأسفرت عن مقتل 11 شخصًا على الأقل، بحسب المسؤول في منطقة كييف تيمور تكاتشينكو، فيما واصلت فرق الإنقاذ البحث بين الأنقاض. وتأتي الضربات بعد تعهد بوتين بردّ «مؤلم» على الهجمات الأوكرانية على جسر القرم.",
+   "summaryEn": "AFP reports Russian strikes killed 15 people in the Kyiv region. An overnight strike on Dymer, about 45 km north of the capital, hit a five-storey building and killed at least 11 people, according to Kyiv regional official Tymur Tkachenko. Rescuers were combing through the rubble. The strikes follow Putin's vow of a \"painful\" response to Ukraine's attacks on the Crimea bridge.",
+   "updatedAt": 1795415276341,
+   "verify": "confirmed"
+  },
+  {
    "id": "vrh9ls4zqv2c4z9pklmb",
    "affectsDubai": false,
    "attachments": [],
@@ -3811,10 +3877,10 @@
   "BH": {
    "auto": "live",
    "level": "high",
-   "noteAr": "شنّت إيران هجمات متكررة على البحرين خلال هذا الشهر، كان آخرها في 21 نوفمبر بموجتين من الطائرات المسيّرة والصواريخ أشعلتا النيران في منشأة صناعية مدنية وأصابتا شخصين أحدهما في حالة حرجة. ويشير تحذير السفارة الأمريكية من ارتفاع خطر الهجمات المسلحة والهجمات على الملاحة قرب هرمز والتقارير عن محاولة إيرانية وشيكة لكسر الحصار الأمريكي إلى استمرار التصعيد.",
-   "noteEn": "Iran has struck Bahrain repeatedly this month, most recently on 21 November with two waves of drone and missile attacks that set a civilian industrial facility ablaze and injured two people, one critically. The US Embassy warning of heightened armed-attack risk, attacks on shipping near Hormuz and reports of an imminent Iranian attempt to break the US blockade indicate continued escalation.",
-   "trend": "up",
-   "updatedAt": 1795413961664
+   "noteAr": "شنت إيران هجمات متكررة على البحرين خلال هذا الشهر، كان آخرها في 21 نوفمبر بموجتين من الطائرات المسيّرة والصواريخ استهدفتا مواقع مرتبطة بالولايات المتحدة، وأدتا إلى اندلاع حريق في منشأة صناعية مدنية وإصابة شخصين. ولا تتضمن نتائج البحث بتاريخ 23 نوفمبر سوى ملخص للهجوم نفسه المسجّل مسبقاً، دون أي أحداث جديدة مستقلة. ويبقى مستوى الخطر على البعثات الدبلوماسية مرتفعاً في ظل الهجمات على الملاحة قرب مضيق هرمز وتعثر المحادثات الأمريكية الإيرانية والمزاعم الإيرانية بشأن إجراء وشيك ضد الحصار الأمريكي.",
+   "noteEn": "Iran has struck Bahrain repeatedly this month, most recently on 21 November with two waves of drone and missile attacks on US-linked sites that set a civilian industrial facility ablaze and injured two people. The search results for 23 November contain only a summary of the same attack, already saved, and no new distinct events. Shipping attacks near Hormuz, the stalled US-Iran talks and Iranian claims of imminent action against the US blockade keep the risk to diplomatic missions elevated.",
+   "trend": "steady",
+   "updatedAt": 1795415248467
   },
   "CA": {
    "auto": "live",
@@ -3834,10 +3900,10 @@
     "type": "cg",
     "updatedAt": 1794821388181
    },
-   "noteAr": "لا توجد في نتائج البحث أي أحداث مؤرخة في 2026-11-23، ولذلك لم يتم رصد مستجدات مؤهلة. وتشير التقارير السابقة إلى استمرار النشاط الدبلوماسي عقب قمة أبيك في شنتشن وإلى توتر مرتفع في مضيق تايوان، دون وجود تهديد مباشر للبعثات الدبلوماسية الأجنبية في الصين أو لمصالح دولة الإمارات.",
+   "noteAr": "لا تتضمن نتائج البحث أي مادة مؤرخة في 23 نوفمبر 2026، ولذلك لم يتم رصد أحداث جديدة مؤهلة. وتشير التقارير السابقة إلى استمرار النشاط الدبلوماسي عقب قمة آبيك في شنتشن وإلى توتر مرتفع في مضيق تايوان، دون وجود تهديد مباشر للبعثات الدبلوماسية الأجنبية في الصين أو للمصالح الإماراتية.",
    "noteEn": "None of the search results are dated 2026-11-23, so no new qualifying events were identified. Earlier reporting shows continued diplomatic activity after the Shenzhen APEC summit and elevated Taiwan Strait tensions, with no direct threat to foreign diplomatic missions in China or to UAE interests.",
    "trend": "steady",
-   "updatedAt": 1795413993216
+   "updatedAt": 1795415283319
   },
   "EG": {
    "auto": "live",
@@ -3849,10 +3915,10 @@
     "type": "cg",
     "updatedAt": 1794821288594
    },
-   "noteAr": "لا تتضمن النتائج المؤرخة في 2026-11-23 أي أحداث أمنية جديدة في مصر، ولا تشير إلى أي تهديد مباشر للبعثات الدبلوماسية على الأراضي المصرية. ويعكس هذا المستوى البيئة الإقليمية الأوسع، بما في ذلك استمرار الهجمات الإيرانية على دول الخليج مثل البحرين والكويت والضربات الحوثية على المملكة العربية السعودية، إلى جانب استمرار جهود الوساطة وخفض التصعيد التي تبذلها مصر.",
-   "noteEn": "The results dated 2026-11-23 contain no new security events in Egypt, and none show a direct threat to diplomatic missions on Egyptian territory. The level reflects the wider regional environment, including continued Iranian attacks on Gulf states such as Bahrain and Kuwait and Houthi strikes on Saudi Arabia, alongside Egypt's ongoing diplomatic mediation and de-escalation efforts.",
+   "noteAr": "لا تتضمن النتائج أي أحداث أمنية جديدة في مصر بتاريخ 2026-11-23، ولا تشير أي منها إلى تهديد مباشر للبعثات الدبلوماسية على الأراضي المصرية. ويعكس هذا المستوى البيئة الإقليمية الأوسع، بما في ذلك استمرار الهجمات الإيرانية على دول خليجية مثل البحرين والكويت والضربات الحوثية على السعودية، إلى جانب جهود مصر المستمرة في الوساطة الدبلوماسية وخفض التصعيد.",
+   "noteEn": "The results contain no new security events in Egypt dated 2026-11-23, and none show a direct threat to diplomatic missions on Egyptian territory. The level reflects the wider regional environment, including continued Iranian attacks on Gulf states such as Bahrain and Kuwait and Houthi strikes on Saudi Arabia, alongside Egypt's ongoing diplomatic mediation and de-escalation efforts.",
    "trend": "steady",
-   "updatedAt": 1795413998127
+   "updatedAt": 1795415288020
   },
   "ET": {
    "auto": "live",
@@ -3864,10 +3930,10 @@
     "type": "cg",
     "updatedAt": 1794821347400
    },
-   "noteAr": "لا تتضمن نتائج البحث أي أحداث أمنية مؤرخة في 2026-11-23، إذ إن أحدث التقارير مؤرخة في 2026-11-19 أو قبل ذلك وهي محفوظة مسبقاً أو خارج النطاق الزمني. ويستند التقييم إلى الوضع المسجل، وهو حشد القوات الإثيوبية والإريترية قرب بادمي مع ضربات بالطائرات المسيّرة والمدفعية، وتجدد القتال بين القوات الاتحادية والجماعات المتحالفة مع تيغراي، والتوتر بين إثيوبيا والسودان بما في ذلك إغلاق القنصليتين المتبادل، واستمرار العنف المجتمعي، دون الإبلاغ عن تهديدات مباشرة ضد البعثات الدبلوماسية.",
-   "noteEn": "No security events dated 2026-11-23 appear in the search results; the latest reports are dated 2026-11-19 or earlier and are already saved or outside the window. The assessment rests on the recorded situation: Ethiopian and Eritrean forces massed near Badme with reported drone and artillery strikes, renewed fighting between federal forces and Tigrayan-aligned groups, Ethiopia-Sudan tensions including reciprocal consulate closures, and continuing communal violence, with no direct threats against diplomatic missions reported.",
+   "noteAr": "لا تتضمن نتائج البحث أي أحداث أمنية مؤرخة في 2026-11-23، فأحدث التقارير (بتاريخ 20 نوفمبر 2026 وما قبله) إما محفوظة مسبقاً أو خارج النطاق الزمني. ويستند التقييم إلى الوضع المسجل، ويشمل حشد القوات الإثيوبية والإريترية قرب بادمي مع ضربات بالطائرات المسيّرة والمدفعية، وتجدد القتال بين القوات الاتحادية والجماعات المتحالفة مع تيغراي، والتوتر بين إثيوبيا والسودان بما في ذلك الإغلاق المتبادل للقنصليات، واستمرار العنف المجتمعي، دون الإبلاغ عن تهديدات مباشرة ضد البعثات الدبلوماسية.",
+   "noteEn": "No security events dated 2026-11-23 appear in the search results; the latest reports (20 November 2026 and earlier) are already saved or outside the window. The level rests on the recorded situation: Ethiopian and Eritrean forces massed near Badme with reported drone and artillery strikes, renewed fighting between federal forces and Tigrayan-aligned groups, Ethiopia-Sudan tensions including reciprocal consulate closures, and continuing communal violence, with no direct threats against diplomatic missions reported.",
    "trend": "steady",
-   "updatedAt": 1795413963669
+   "updatedAt": 1795415254398
   },
   "IL": {
    "auto": "live",
@@ -3879,18 +3945,18 @@
     "type": "cg",
     "updatedAt": 1794821327271
    },
-   "noteAr": "أفادت تقارير بأن إسرائيل والقيادة المركزية الأمريكية اتفقتا على خطط مشتركة لتصعيد محتمل ضد إيران، وتشير تقديرات الجيش الإسرائيلي إلى أن تجدد الحرب ليس أقرب مما كان في الأيام الأخيرة، مع بقاء مستوى التأهب العسكري مرتفعاً دون بلوغ حده الأقصى. وتتواصل الضربات الإسرائيلية في غزة ويتصاعد عنف المستوطنين في الضفة الغربية وتبقى مفاوضات تشكيل الائتلاف متعثرة قبيل الموعد النهائي في 6 ديسمبر، ولا يظهر في النتائج أي تهديد مباشر للبعثات الدبلوماسية أو لدولة الإمارات.",
-   "noteEn": "Israel and CENTCOM are reported to have agreed joint plans for possible escalation against Iran, and Israeli army assessments say renewed war is no more imminent than in recent days, with the military alert level high but not at maximum. Israeli strikes in Gaza continue, West Bank settler violence is escalating, and coalition talks remain deadlocked ahead of the December 6 deadline, while no direct threat to diplomatic missions or to the UAE appears in the results.",
+   "noteAr": "لا تتضمن النتائج أي أحداث أمنية جديدة بتاريخ 2026-11-23 سوى تقرير موقع المونيتور عن سعي إسرائيل إلى شن حملة جوية ضد إيران، وهو محفوظ مسبقاً. ويبقى مستوى التهديد مرتفعاً بسبب التخطيط الأمريكي الإسرائيلي المعلن لعمل محتمل متجدد ضد إيران، واستمرار العمليات الإسرائيلية في غزة وجنوب لبنان، وتعثر مفاوضات تشكيل الائتلاف قبل مهلة 6 ديسمبر، في حين لا تظهر في النتائج أي تهديد مباشر للبعثات الدبلوماسية أو لدولة الإمارات.",
+   "noteEn": "The results contain no new security events dated 2026-11-23 beyond the Al-Monitor report on Israel's push for an air campaign against Iran, which is already saved. Risk stays high because of reported US-Israeli planning for possible renewed action against Iran, continuing Israeli operations in Gaza and southern Lebanon, and deadlocked coalition talks ahead of the December 6 deadline, while no direct threat to diplomatic missions or the UAE appears in the results.",
    "trend": "steady",
-   "updatedAt": 1795413967251
+   "updatedAt": 1795415258966
   },
   "IN": {
    "auto": "live",
    "level": "medium",
-   "noteAr": "لا تتضمن نتائج البحث أي حدث ذي صلة بالأمن مؤرخ في 2026-11-23، إذ إن أحدث المواد مؤرخة في 2026-11-22 أو قبل ذلك وهي إما محفوظة مسبقاً أو غير ذات صلة بالأمن. وتبقى أنشطة المسلحين في جامو وكشمير، والعنف العرقي في مانيبور، والهجمات البحرية قرب مضيق هرمز التي طالت مواطنين هنوداً، والتوتر بين بنغلاديش والهند، محل متابعة، غير أن النتائج لا تُظهر أي تهديد مباشر للبعثات الدبلوماسية.",
-   "noteEn": "None of the search results report a security-relevant event dated 2026-11-23; the latest items are dated 2026-11-22 or earlier and are either already saved or not security-relevant. Militant activity in Jammu and Kashmir, ethnic violence in Manipur, maritime attacks near the Strait of Hormuz involving Indian nationals and Bangladesh-India tensions remain worth monitoring, but the results show no direct threat to diplomatic missions.",
+   "noteAr": "لا تتضمن نتائج البحث أي حدث ذي صلة بالأمن مؤرخ في 23 نوفمبر 2026، إذ إن أحدث المواد مؤرخة في 22 نوفمبر 2026 أو قبل ذلك وهي إما محفوظة مسبقاً أو لا تتصل بالشأن الأمني. وتبقى أنشطة المسلحين في جامو وكشمير، والعنف العرقي في مانيبور، والهجمات البحرية قرب مضيق هرمز التي تطال مواطنين هنوداً، والتوتر بين الهند وبنغلاديش، والمسيرة الاحتجاجية المقررة في 26 نوفمبر في نيودلهي بشأن مراجعة قوائم الناخبين، موضع متابعة، إلا أن النتائج لا تُظهر تهديداً مباشراً للبعثات الدبلوماسية.",
+   "noteEn": "None of the search results report a security-relevant event dated 2026-11-23; the latest items are dated 2026-11-22 or earlier and are either already saved or not security-relevant. Militant activity in Jammu and Kashmir, ethnic violence in Manipur, maritime attacks near the Strait of Hormuz involving Indian nationals, Bangladesh-India tensions and a planned 26 November protest march in New Delhi over voter-list revision remain worth monitoring, but the results show no direct threat to diplomatic missions.",
    "trend": "steady",
-   "updatedAt": 1795414002456
+   "updatedAt": 1795415290414
   },
   "IR": {
    "auto": "live",
@@ -3902,10 +3968,10 @@
     "type": "cg",
     "updatedAt": 1794821332436
    },
-   "noteAr": "لم يتسنَّ التحقق من وقوع أحداث جديدة ومستقلة بتاريخ 2026-11-23 في النتائج المتاحة، إذ سبق تسجيل حادث الحريق في المنشأة الصناعية في البحرين والضربات على رادارات باتريوت (بتاريخ 21 و22 نوفمبر). ويبقى الوضع العام حرجاً، فإيران تستعد لدفع 14 ناقلة لتحدي الحصار الأمريكي، وهجمات مضيق هرمز بلغت أعلى مستوياتها منذ بدء الحرب، وما زالت التقارير تتحدث عن هجوم أمريكي إسرائيلي جديد محتمل، وهو ما يمثل خطراً إقليمياً مباشراً على دولة الإمارات وبعثاتها الدبلوماسية.",
-   "noteEn": "No new distinct events dated 2026-11-23 could be confirmed in the results; the Bahrain industrial-facility fire and Patriot radar strikes were already saved (dated 21-22 November). The overall picture remains critical: Iran is preparing 14 tankers to challenge the US blockade, Hormuz attacks are at their highest level since the war began, and reports of a possible new US-Israeli assault persist, all of which pose a direct regional risk to the UAE and its diplomatic missions.",
+   "noteAr": "تواصل إيران هجماتها على الأصول الأمريكية في البحرين وعلى الملاحة في مضيق هرمز، وتجهز 14 ناقلة لتحدي الحصار الأمريكي، وتستمر التقارير عن ضربات أمريكية إسرائيلية جديدة، رغم إرجاء الضربة الأمريكية أسبوعاً على الأقل بحسب التقارير. وتمثل هذه الظروف خطراً إقليمياً مباشراً على دولة الإمارات وبعثاتها الدبلوماسية، وتبقى التهديدات السابقة ضد منشآت النفط الخليجية والشبكات في دبي قائمة.",
+   "noteEn": "Iran continues attacks on US assets in Bahrain and on Hormuz shipping, is preparing 14 tankers to challenge the US blockade, and reports of renewed US-Israeli strikes persist, although a US strike is reportedly postponed by at least a week. These conditions pose a direct regional risk to the UAE and its diplomatic missions, and earlier threats against Gulf oil facilities and Dubai networks remain relevant.",
    "trend": "steady",
-   "updatedAt": 1795413952489
+   "updatedAt": 1795415253154
   },
   "LB": {
    "auto": "live",
@@ -3917,26 +3983,26 @@
     "type": "cg",
     "updatedAt": 1794821318755
    },
-   "noteAr": "لا تتضمن النتائج أي أحداث أمنية جديدة بتاريخ 2026-11-23، والتقارير الأحدث (من 19 إلى 22 نوفمبر) إما مدرجة ضمن الإدخالات المحفوظة أو أقدم من التاريخ المطلوب. وتتواصل الضربات والقصف الإسرائيلي في جنوب لبنان والبقاع، ولا تزال مسألة نزع سلاح حزب الله وترتيبات ما بعد قوة اليونيفيل قبل انتهاء ولايتها في 31 ديسمبر دون حل، دون أي تهديد مباشر مُبلَّغ عنه للبعثات الدبلوماسية.",
-   "noteEn": "No new security events dated 2026-11-23 appear in the results, and the most recent reporting (Nov. 19-22) is already covered by saved entries or is older. Israeli strikes and shelling in southern Lebanon and the Bekaa continue, and Hezbollah disarmament and the post-UNIFIL arrangement ahead of the Dec. 31 mandate expiry remain unresolved, with no reported direct threat to diplomatic missions.",
+   "noteAr": "لا تتضمن نتائج البحث أي أحداث أمنية مؤرخة في 2026-11-23، كما أن أحدث التقارير (22 نوفمبر وما قبله) إما مغطى بالإدخالات المحفوظة أو أقدم منها. وتتواصل الغارات والقصف الإسرائيلي في جنوب لبنان والبقاع، ولا تزال مسألة نزع سلاح حزب الله وترتيبات ما بعد انتهاء ولاية قوة اليونيفيل في 31 ديسمبر دون حسم، ولم يرد أي تهديد مباشر للبعثات الدبلوماسية.",
+   "noteEn": "No security events dated 2026-11-23 appear in the search results; the most recent reporting (Nov. 22 and earlier) is already covered by saved entries or is older. Israeli strikes and shelling in southern Lebanon and the Bekaa continue, and Hezbollah disarmament and the post-UNIFIL arrangement ahead of the Dec. 31 mandate expiry remain unresolved, with no reported direct threat to diplomatic missions.",
    "trend": "steady",
-   "updatedAt": 1795413968979
+   "updatedAt": 1795415259555
   },
   "LY": {
    "auto": "live",
    "level": "medium",
-   "noteAr": "يشير تحذير الأمم المتحدة بشأن هجمات بنغازي، بما فيها الهجوم المشتبه به بطائرة مسيّرة على سفينة روسية، إلى جانب استمرار الحصار المسلح لخط أنابيب الحمادة، إلى تصاعد مخاطر امتداد النزاعات الخارجية وعدم الاستقرار. ولم يُبلغ عن تهديد مباشر للبعثات الدبلوماسية كما يتواصل الانخراط الدبلوماسي، لذا يبقى المستوى متوسطاً مع اتجاه تصاعدي.",
-   "noteEn": "The UN warning over attacks in Benghazi, including a suspected drone strike on a Russian ship, together with the continuing armed blockade of the Hamada pipeline, points to rising risks of foreign-conflict spillover and instability. No direct threat to diplomatic missions is reported and diplomatic engagement continues, so the level remains medium with an upward trend.",
+   "noteAr": "يشير تحذير الأمم المتحدة بشأن هجمات بنغازي، التي أعقبت اشتباهاً بضربة بطائرة مسيّرة على سفينة روسية، إلى جانب استمرار الحصار المسلح لخط أنابيب الحمادة، إلى تزايد مخاطر امتداد الصراعات الخارجية وعدم الاستقرار. ولا تذكر النتائج أي تهديد مباشر للبعثات الدبلوماسية ويستمر الانخراط الدبلوماسي، لذا يبقى المستوى متوسطاً مع اتجاه تصاعدي.",
+   "noteEn": "The UN warning over the Benghazi attacks, which followed a suspected drone strike on a Russian ship, together with the continuing armed blockade of the Hamada pipeline, points to rising risks of foreign-conflict spillover and instability. No direct threat to diplomatic missions is reported in the results and diplomatic engagement continues, so the level remains medium with an upward trend.",
    "trend": "up",
-   "updatedAt": 1795413996566
+   "updatedAt": 1795415284146
   },
   "PK": {
    "auto": "live",
    "level": "high",
-   "noteAr": "يتواصل العنف المسلح والعمليات الأمنية لمكافحة الإرهاب في خيبر بختونخوا وبلوشستان، وتستمر التوترات السياسية، فيما يتواصل النزاع الأمريكي الإيراني والخليجي في المنطقة. ولم يُسجَّل في نتائج اليوم أي تهديد مباشر للبعثات الدبلوماسية، والحدث الوحيد المؤهل بتاريخ 2026-11-23 حدث دبلوماسي اعتيادي، لذا يبقى التقييم دون تغيير.",
-   "noteEn": "Militant violence and counter-terrorism operations continue in Khyber Pakhtunkhwa and Balochistan, and political tension persists, while the US-Iran and Gulf conflict continues regionally. No direct threat to diplomatic missions was reported in today's results, and the only qualifying item dated 2026-11-23 is a routine diplomatic event, so the assessment is unchanged.",
+   "noteAr": "يتواصل العنف المسلح والعمليات الأمنية لمكافحة الإرهاب في خيبر بختونخوا وبلوشستان، بما في ذلك هجوم بطائرات مسيّرة أُبلغ عنه على جرگة سلام في بانو، فيما تستمر التوترات السياسية والنزاع الإقليمي بين الولايات المتحدة وإيران ومنطقة الخليج. ولم تُسجَّل في نتائج اليوم أي تهديدات مباشرة للبعثات الدبلوماسية، ولذلك يبقى التقييم دون تغيير.",
+   "noteEn": "Militant violence and counter-terrorism operations continue in Khyber Pakhtunkhwa and Balochistan, including a reported drone attack on a peace jirga in Bannu, while political tension persists and the US-Iran and Gulf conflict continues regionally. No direct threat to diplomatic missions was reported in today's results, so the assessment is unchanged.",
    "trend": "steady",
-   "updatedAt": 1795413976318
+   "updatedAt": 1795415267617
   },
   "QA": {
    "auto": "live",
@@ -3971,10 +4037,10 @@
   "SA": {
    "auto": "live",
    "level": "high",
-   "noteAr": "لا تتضمن النتائج أي أحداث أمنية جديدة بتاريخ 2026-11-23 خارج الإدخالات المحفوظة سابقاً، أما الخبر الوحيد بهذا التاريخ، وهو إدانة المملكة للهجمات بالطائرات المسيّرة على الخرطوم، فيتعلق بالسودان ولا يمس أمن المملكة مباشرة. ويبقى مستوى التهديد مرتفعاً في ظل حملة الصواريخ والطائرات المسيّرة الحوثية والهجمات الإيرانية على دول الخليج والملاحة البحرية.",
-   "noteEn": "The results contain no new security events dated 2026-11-23 beyond already saved entries. The only item dated that day, Saudi condemnation of drone attacks on Khartoum, concerns Sudan and has no direct Saudi security impact, so the threat level stays high given the Houthi missile and drone campaign and Iranian attacks on Gulf states and shipping.",
+   "noteAr": "لا تتضمن النتائج أي أحداث أمنية جديدة بتاريخ 2026-11-23 تتجاوز المدخلات المحفوظة سابقاً، أما الخبر الوحيد المؤرخ في ذلك اليوم، وهو إدانة المملكة للهجمات بالطائرات المسيّرة على الخرطوم، فيتعلق بالسودان وليس له أثر أمني مباشر على المملكة. ويبقى المستوى مرتفعاً بسبب استمرار حملة الصواريخ والطائرات المسيّرة الحوثية ضد الرياض وجنوب المملكة، ومنها الأضرار التي لحقت ببرج صندوق الاستثمارات العامة في 19 نوفمبر، والهجمات الإيرانية على دول الخليج والملاحة البحرية.",
+   "noteEn": "The results contain no new security events dated 2026-11-23 beyond already saved entries; the only item dated that day, Saudi condemnation of drone attacks on Khartoum, concerns Sudan and has no direct Saudi security impact. The level stays high because of the ongoing Houthi missile and drone campaign against Riyadh and southern Saudi Arabia, including the 19 November damage to the PIF Tower, and Iranian attacks on Gulf states and shipping.",
    "trend": "steady",
-   "updatedAt": 1795413957885
+   "updatedAt": 1795415265510
   },
   "SD": {
    "auto": "live",
@@ -3986,18 +4052,18 @@
     "type": "cg",
     "updatedAt": 1794821305733
    },
-   "noteAr": "تتواصل الحرب بين الجيش السوداني وقوات الدعم السريع، مع ضربات بالطائرات المسيّرة على الخرطوم أضرت بمجمع تابع للأمم المتحدة، وتقدم لقوات الدعم السريع والحركة الشعبية - شمال في النيل الأزرق، وإعدام مبلغ عنه لجنود أسرى. ولا تُظهر النتائج تهديدا مباشرا للبعثات الدبلوماسية، إلا أن ادعاء غير مؤكد يسمّي الإمارات موردا للسلاح إلى الدعم السريع، إضافة إلى اتهام سابق من منظمة العفو الدولية، قد يزيد مخاطر السمعة والاحتجاج.\"",
-   "noteEn": "The SAF-RSF war continues, with drone strikes in Khartoum that damaged a U.N. compound, RSF-SPLM-N advances in Blue Nile and the reported execution of captured soldiers. The results show no direct threat to diplomatic missions, but an unverified claim naming the UAE as an RSF arms supplier, along with Amnesty's earlier allegation, could add reputational and protest risk.",
+   "noteAr": "تتواصل الحرب بين الجيش السوداني وقوات الدعم السريع، مع ضربات بطائرات مسيّرة في الخرطوم أودت بحياة أربعة أشخاص على الأقل وألحقت أضراراً بمجمع تابع للأمم المتحدة، إضافة إلى المعارك في النيل الأزرق وغرب كردفان. ولا تُظهر النتائج تهديداً مباشراً للبعثات الدبلوماسية، إلا أن الادعاء غير المؤكد الذي نشرته منصة ليف يو إي ماب بشأن تزويد الإمارات لقوات الدعم السريع بالأسلحة، إلى جانب طرد الدبلوماسيين بين السودان وإثيوبيا، يزيدان من مخاطر السمعة والاحتجاج.",
+   "noteEn": "The SAF-RSF war continues, with drone strikes in Khartoum that killed at least four people and damaged a U.N. compound, and with fighting in Blue Nile and West Kordofan. The results show no direct threat to diplomatic missions, but the unverified Liveuamap claim naming the UAE as an RSF arms supplier, together with the Sudan-Ethiopia diplomatic expulsions, adds reputational and protest risk.",
    "trend": "steady",
-   "updatedAt": 1795413981854
+   "updatedAt": 1795415273104
   },
   "SO": {
    "auto": "live",
    "level": "critical",
-   "noteAr": "لا تتضمن النتائج أي أحداث أمنية جديدة بتاريخ 2026-11-23، إذ إن أحدث المواد مؤرخة في 2026-11-22 أو قبل ذلك وتتداخل مع البنود المحفوظة سابقاً. ويبقى المستوى حرجاً بسبب طرد الصومال سفير دولة الإمارات بمهلة 72 ساعة اعتباراً من 19 نوفمبر واستدعائه سفيره، واتهاماته الرسمية للإمارات بـ«غزو صريح»، واستمرار الأزمة السياسية والقضائية، وانتهاء ولاية بعثة الاتحاد الأفريقي (أوسوم) في 31 ديسمبر، واستمرار تهديد حركة الشباب.",
-   "noteEn": "No new security events dated 2026-11-23 appear in the results; the latest items are dated 2026-11-22 or earlier and overlap with entries already saved. The level stays critical because of Somalia's expulsion of the UAE ambassador with a 72-hour deadline from 19 November, the recall of its own envoy, official accusations of a UAE 'open invasion', the unresolved political and judicial crisis, the AUSSOM mandate expiring on 31 December and the persistent al-Shabaab threat.",
+   "noteAr": "لا تتضمن النتائج أي أحداث أمنية مؤرخة في 23 نوفمبر 2026، إذ إن أحدث المواد مؤرخة في 22 نوفمبر 2026 أو قبله وتتداخل مع المدخلات المحفوظة. ويبقى المستوى حرجاً بسبب قرار الصومال في 19 نوفمبر مطالبة سفير دولة الإمارات بمغادرة البلاد خلال 72 ساعة واستدعاء سفيرها واتهامه الإمارات بـ«غزو علني»، إضافة إلى الأزمة السياسية والقضائية القائمة وانتهاء ولاية بعثة الاتحاد الأفريقي (أوسوم) في 31 ديسمبر واستمرار تهديد حركة الشباب.",
+   "noteEn": "No security events dated 2026-11-23 appear in the results; the latest items are dated 2026-11-22 or earlier and overlap with saved entries. The level remains critical because of Somalia's 19 November order for the UAE ambassador to leave within 72 hours, its recall of its own envoy and its accusations of an 'open invasion' by the UAE, together with the unresolved political and judicial crisis, the AUSSOM mandate expiring on 31 December and the persistent al-Shabaab threat.",
    "trend": "steady",
-   "updatedAt": 1795413952059
+   "updatedAt": 1795415242468
   },
   "UA": {
    "auto": "live",
@@ -4009,10 +4075,10 @@
     "type": "cg",
     "updatedAt": 1794821360032
    },
-   "noteAr": "لا تزال الضربات الصاروخية وبالطائرات المسيّرة الروسية واسعة النطاق، ومنها على كييف، تهدد المدنيين والحي الدبلوماسي، عقب الأضرار التي لحقت مؤخراً بمقري السفارتين النمساوية والهولندية. ولا تظهر نتائج 23 نوفمبر أي هجوم مباشر جديد على بعثة دبلوماسية ولا أي اختراق في مسار السلام، لذا يبقى المستوى مرتفعاً ومستقراً.",
-   "noteEn": "Russia's large-scale missile and drone strikes, including on Kyiv, continue to endanger civilians and the diplomatic quarter, following recent damage to the Austrian and Dutch embassy premises. The 23 November results show no new direct attack on a mission, and no peace breakthrough, so the level stays high and steady.",
+   "noteAr": "تتواصل الضربات الروسية الواسعة بالصواريخ والطائرات المسيّرة وتوقع قتلى مدنيين في كييف ومحيطها، كما تبيّن ضربة ديمير في 23 نوفمبر، مما يُبقي الحي الدبلوماسي معرضًا للخطر. ولم تُظهر نتائج 23 نوفمبر أي هجوم مباشر جديد على بعثة دبلوماسية ولا أي انفراجة في مسار السلام، لذا يبقى المستوى مرتفعًا ومستقرًا.",
+   "noteEn": "Russia's large-scale missile and drone strikes continue to kill civilians in and around Kyiv, as shown by the 23 November strike on Dymer, which keeps the diplomatic quarter at risk. The 23 November results show no new direct attack on a diplomatic mission and no peace breakthrough, so the level remains high and steady.",
    "trend": "steady",
-   "updatedAt": 1795413988300
+   "updatedAt": 1795415276708
   },
   "US": {
    "auto": "live",
@@ -4024,10 +4090,10 @@
     "type": "cg",
     "updatedAt": 1794821221917
    },
-   "noteAr": "لا توجد في نتائج البحث أي مواد مؤرخة في 2026-11-23، وأحدث التقارير ذات الصلة مؤرخة في 19 نوفمبر أو قبل ذلك، ولذلك لا توجد أحداث جديدة مؤهلة. ولا يزال النزاع بين الولايات المتحدة وإيران دون حل، وتصريح مدير الاستخبارات الوطنية جاي كلايتون في 19 نوفمبر بأن التهديدات الإيرانية للأمريكيين ازدادت بصورة كبيرة، إضافة إلى تنبيهات السفارات الأمريكية في أنحاء الشرق الأوسط، تُبقي مستوى التهديد عند «مرتفع».",
-   "noteEn": "None of the search results is dated 2026-11-23; the most recent relevant reports are dated 19 November or earlier, so no new events qualify. The US-Iran conflict remains unresolved, and Director of National Intelligence Jay Clayton's 19 November statement that Iranian threats to Americans have 'substantially increased' and the US embassy alerts across the Middle East keep the level at high.",
+   "noteAr": "لا توجد أي نتيجة بحث مؤرخة في 23 نوفمبر 2026، وأحدث التقارير ذات الصلة مؤرخة في 20 نوفمبر أو قبله، لذلك لا توجد أحداث جديدة مستوفية للمعايير. ولا يزال النزاع بين الولايات المتحدة وإيران دون حل، وتشير تصريحات مدير الاستخبارات الوطنية جاي كلايتون بأن التهديدات الإيرانية ضد الأمريكيين 'ازدادت بشكل كبير'، إلى جانب تنبيهات السفارات الأمريكية في الشرق الأوسط من هجمات إيرانية وحوثية، إلى إبقاء مستوى التهديد عند مستوى مرتفع.",
+   "noteEn": "None of the search results is dated 2026-11-23; the most recent relevant reports are dated 20 November or earlier, so no new events qualify. The US-Iran conflict remains unresolved, and Director of National Intelligence Jay Clayton's statement that Iranian threats to Americans have 'substantially increased', together with US embassy alerts across the Middle East warning of Iranian and Houthi attacks, keeps the level at high.",
    "trend": "steady",
-   "updatedAt": 1795413987278
+   "updatedAt": 1795415278975
   }
  },
  "briefs": {
@@ -4404,17 +4470,17 @@
    "start": "2026-11-16"
   },
   "2026-11-23": {
-   "count": 8,
-   "countries": 6,
+   "count": 11,
+   "countries": 7,
    "critical": 0,
    "dubai": 0,
    "end": "2026-11-29",
-   "high": 6,
+   "high": 9,
    "low": 1,
    "medium": 1,
    "parts": 1,
-   "savedAt": 1795413991938,
-   "sig": "1jgts4i",
+   "savedAt": 1795415279989,
+   "sig": "1ix6o6g",
    "start": "2026-11-23"
   }
  },
@@ -7573,6 +7639,60 @@
      "auto": "live",
      "category": "conflict",
      "country": "UA",
+     "createdAt": 1795415276341,
+     "date": "2026-11-23",
+     "headlineAr": "ضربة روسية ليلية على بلدة ديمير في منطقة كييف تقتل 11 شخصًا على الأقل وحصيلة المنطقة 15 قتيلًا",
+     "headlineEn": "Russian overnight strike on Dymer, Kyiv region, kills at least 11; Kyiv region toll 15",
+     "id": "vompvx56rctep3jt9ccq",
+     "link": "https://www.afp.com/en/ukraine-says-russian-strikes-kill-15-kyiv-region",
+     "severity": "high",
+     "source": "AFP",
+     "summaryAr": "أفادت وكالة فرانس برس بأن الضربات الروسية أودت بحياة 15 شخصًا في منطقة كييف. وأصابت ضربة ليلية بلدة ديمير الواقعة على بعد نحو 45 كيلومترًا شمال العاصمة مبنى من خمسة طوابق وأسفرت عن مقتل 11 شخصًا على الأقل، بحسب المسؤول في منطقة كييف تيمور تكاتشينكو، فيما واصلت فرق الإنقاذ البحث بين الأنقاض. وتأتي الضربات بعد تعهد بوتين بردّ «مؤلم» على الهجمات الأوكرانية على جسر القرم.",
+     "summaryEn": "AFP reports Russian strikes killed 15 people in the Kyiv region. An overnight strike on Dymer, about 45 km north of the capital, hit a five-storey building and killed at least 11 people, according to Kyiv regional official Tymur Tkachenko. Rescuers were combing through the rubble. The strikes follow Putin's vow of a \"painful\" response to Ukraine's attacks on the Crimea bridge.",
+     "updatedAt": 1795415276341
+    },
+    {
+     "affectsDubai": false,
+     "attachments": [],
+     "auto": "live",
+     "category": "terror",
+     "country": "PK",
+     "createdAt": 1795415267220,
+     "date": "2026-11-23",
+     "headlineAr": "ضربتان بطائرات مسيّرة تستهدفان جرگة سلام في بانو وإصابة 10 أشخاص",
+     "headlineEn": "Two drone strikes target peace jirga in Bannu, injuring 10",
+     "id": "n8mnxuun5qgstmtr5s6f",
+     "link": "https://www.pakistantoday.com.pk/category/national",
+     "severity": "high",
+     "source": "Pakistan Today",
+     "summaryAr": "أوردت صحيفة باكستان توداي خبراً عن ضربتين بطائرات مسيّرة استهدفتا جرگة سلام في بانو وأسفرتا عن إصابة 10 أشخاص. ولم يتضمن الخبر تفاصيل إضافية بشأن الجهة المنفذة أو الموقع الدقيق، والخبر غير مؤرخ في الصفحة وقد استُنتج تاريخه من قائمة الصفحة بتاريخ 23 نوفمبر.",
+     "summaryEn": "Pakistan Today lists a report that two drone strikes targeted a peace jirga in Bannu, injuring 10 people. The listing gives no further details on perpetrators or exact location, and the item is undated on the page, so its date is inferred from the page's 23 Nov listing.",
+     "updatedAt": 1795415267220
+    },
+    {
+     "affectsDubai": false,
+     "attachments": [],
+     "auto": "live",
+     "category": "conflict",
+     "country": "IR",
+     "createdAt": 1795415252782,
+     "date": "2026-11-23",
+     "headlineAr": "تقارير: واشنطن ترجئ ضربة محتملة على إيران أسبوعاً على الأقل رغم ضغوط نتنياهو",
+     "headlineEn": "US reportedly postpones Iran strike by at least a week despite Netanyahu pressure",
+     "id": "fqr2kiowyd1lpb7y581k",
+     "link": "https://www.iranintl.com/en/liveblog/202611214578",
+     "severity": "high",
+     "source": "Iran International",
+     "summaryAr": "أفادت صحيفة «يديعوت» الإلكترونية (واي نت) نقلاً عن مسؤولين في الإدارة الأمريكية يوم الأحد بأن الولايات المتحدة قررت في الوقت الحالي إرجاء أي ضربة عسكرية محتملة على إيران أسبوعاً على الأقل رغم ضغوط رئيس الوزراء الإسرائيلي بنيامين نتنياهو لشن هجوم مشترك. وذكرت قناة i24NEWS نقلاً عن مسؤولين أمنيين إسرائيليين أن القيادة المركزية الأمريكية في أقصى درجات الجاهزية وتدفع باتجاه توجيه ضربة بالتنسيق مع إسرائيل. وقال الرئيس ترامب لقناة «فوكس نيوز» إنه يميل إلى استئناف الضربات بعد رأس السنة إذا لم يتم التوصل إلى اتفاق، محذراً من أن السفن الإيرانية التي تختبر الحصار البحري الأمريكي ستكون «في قاع البحر».",
+     "summaryEn": "Israeli outlet Ynet, citing US administration officials, reported on Sunday that the US decided for now to postpone any potential military strike on Iran by at least a week, despite pressure from Israeli Prime Minister Benjamin Netanyahu for a joint offensive. i24NEWS, citing Israeli security officials, reported that US Central Command is at maximum readiness and pushing for a strike alongside Israel. President Trump told Fox News he was inclined to resume strikes after the new year if no deal is reached, and warned that Iranian ships testing the US naval blockade would 'all be at the bottom of the sea'.",
+     "updatedAt": 1795415252782
+    },
+    {
+     "affectsDubai": false,
+     "attachments": [],
+     "auto": "live",
+     "category": "conflict",
+     "country": "UA",
      "createdAt": 1795413987798,
      "date": "2026-11-23",
      "headlineAr": "هجوم روسي على مبنى سكني في أوكرانيا يودي بحياة تسعة أشخاص على الأقل وفرق الإنقاذ تبحث عن ناجين",
@@ -7713,19 +7833,19 @@
     }
    ],
    "part": 0,
-   "savedAt": 1795413991372,
+   "savedAt": 1795415279608,
    "week": "2026-11-23"
   }
  },
  "meta": {
   "update": {
-   "at": 1795414003044,
+   "at": 1795415291181,
    "auto": true,
    "by": "u_ME2urfKpw5utxQ731awcQw",
    "countries": 15,
    "days": 1,
    "failed": 0,
-   "total": 4,
+   "total": 3,
    "touched": 15
   }
  },

@@ -21,9 +21,9 @@ COLLECTIONS = ["news", "countries", "briefs", "forecasts", "weeks", "weekparts",
 # meta documents that are only short-lived locks
 SKIP_META = {"lock", "watch", "morning"}
 KNOWN = {
-    "5be0d5253729ae85226128d7500f2982": "assets/logo-government-of-dubai.png",
-    "b1dcdf8a583754ef7bfec3a744dc1ff8": "assets/logo-acis.png",
-    "5438a066ac0b2abe6f9b3b0d7851c092": "assets/logo-dubai-police.png",
+    "322fd63800b52f604b57d7fd7f847990": "assets/logo-government-of-dubai.png",
+    "4522aa388c10184e0b52582ad3ddabe3": "assets/logo-acis.png",
+    "4c894cd48362b159cbe687ddad336ce9": "assets/logo-dubai-police.png",
     "1122195bbfbc74b58778b70a2d8b2339": "assets/app-icon.png",
     "bbc1c4ba434efe257939f45b4774f7f0": "assets/app-icon-previous.png",
     "734c32606cfc02dc09c0a64d0f967153": "assets/fonts/29LT-Bukra-Regular.otf",

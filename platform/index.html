@@ -44,11 +44,13 @@ button{cursor:pointer}
 .mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
 .wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));max-width:1500px;margin:0 auto}
 
-.plate{background:var(--plate);border-bottom:1px solid var(--plate-line)}
+.plate{background:transparent}
+:root[data-ui="light"] .plate img{filter:brightness(0);opacity:.86}
 .plate .wrap{direction:ltr;display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
-.plate img{display:block;height:46px;width:auto;max-width:none}
+.plate img{display:block;height:46px;width:auto;max-width:none;object-fit:contain}
 .plate .right{display:flex;align-items:center;gap:22px}
-.plate .acis{height:40px}
+.plate .acis{height:36px}
+.plate .gov{height:56px}
 
 .bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--panel);border-bottom:1px solid var(--line)}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--panel)}
@@ -303,8 +305,8 @@ main{padding-block:18px 40px}
 
 /* PDF render source */
 #report{position:fixed;left:-10000px;top:0;width:794px;background:#fff;color:#14202B;font-family:var(--f-body);padding:0 0 30px}
-#report .rp-plate{background:#F3F0EA;display:flex;justify-content:space-between;align-items:center;padding:16px 34px;direction:ltr}
-#report .rp-plate img{height:52px;max-width:none}
+#report .rp-plate{background:#fff;border-bottom:1px solid #DDD7CC;display:flex;justify-content:space-between;align-items:center;padding:16px 34px;direction:ltr}
+#report .rp-plate img{height:52px;max-width:none;filter:brightness(0);opacity:.86}
 #report .rp-plate .r{display:flex;gap:22px;align-items:center}
 #report .rp-plate .acis{height:44px}
 #report .rp-h{padding:22px 34px 12px;border-bottom:2px solid #1E7A4F}
@@ -340,7 +342,7 @@ main{padding-block:18px 40px}
   .items{max-height:none}
 }
 @media (max-width:640px){
-  .plate img{height:34px}.plate .acis{height:28px}.plate .right{gap:10px}
+  .plate img{height:34px}.plate .acis{height:26px}.plate .gov{height:42px}.plate .right{gap:10px}
   .nav{order:3;width:100%}
   .nav button{flex:1;padding:6px 8px}
   .two{grid-template-columns:1fr}
@@ -350,16 +352,16 @@ main{padding-block:18px 40px}
   .legend{display:none}
   .toolbar h1{width:100%}
 }
-@media (max-width:420px){.plate img{height:28px}.plate .acis{height:22px}}
+@media (max-width:420px){.plate img{height:28px}.plate .acis{height:20px}.plate .gov{height:34px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 
 <div class="plate">
   <div class="wrap">
-    <img src="/_blob/5be0d5253729ae85226128d7500f2982" alt="Government of Dubai — حكومة دبي">
+    <img class="gov" src="/_blob/322fd63800b52f604b57d7fd7f847990" alt="Government of Dubai — حكومة دبي">
     <div class="right">
-      <img class="acis" src="/_blob/b1dcdf8a583754ef7bfec3a744dc1ff8" alt="Authorities & Critical Infrastructure Security — إدارة أمن الهيئات والمنشآت الحيوية">
-      <img src="/_blob/5438a066ac0b2abe6f9b3b0d7851c092" alt="Dubai Police — شرطة دبي">
+      <img class="acis" src="/_blob/4522aa388c10184e0b52582ad3ddabe3" alt="Authorities & Critical Infrastructure Security — إدارة أمن الهيئات والمنشآت الحيوية">
+      <img src="/_blob/4c894cd48362b159cbe687ddad336ce9" alt="Dubai Police — شرطة دبي">
     </div>
   </div>
 </div>
@@ -1050,13 +1052,14 @@ async function inlineImages(n){
   }
   return out;
 }
-const PHCSS=`.ph{background:#F3F0EA;color:#14202B;font-family:"IBM Plex Sans Arabic","Geeza Pro","Noto Naskh Arabic",-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;-webkit-text-size-adjust:100%;text-size-adjust:100%;margin:0}
+const PHCSS=`.ph{background:#FFFFFF;color:#14202B;font-family:"IBM Plex Sans Arabic","Geeza Pro","Noto Naskh Arabic",-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;-webkit-text-size-adjust:100%;text-size-adjust:100%;margin:0}
 .ph *{box-sizing:border-box}
 .ph .wrap{width:100%;max-width:640px;margin:0 auto;padding:16px}
 .ph .plate{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 14px;direction:ltr;padding:4px 0 12px;border-bottom:1px solid #DDD7CC}
-.ph .plate img{display:block;height:30px;width:auto;max-width:100%}
+.ph .plate img{display:block;height:30px;width:auto;max-width:100%;filter:brightness(0);opacity:.86}
 .ph .plate .r{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .ph .plate .r img{height:26px}
+.ph .plate .r img[alt="ACIS"]{height:20px}
 .ph .tag{padding-top:14px;font-size:12.5px;color:#566370;font-weight:600;line-height:1.5}
 .ph .card{background:#FFFFFF;border:1px solid #DDD7CC;border-radius:14px;padding:16px 16px 18px;margin-top:12px}
 .ph .meta{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;font-size:13px;color:#566370;line-height:1.6}
@@ -1097,7 +1100,7 @@ async function loadJsPdf(){
    shapes Arabic itself — no letter-by-letter capture (which breaks Arabic on iPhone Safari).
    Laid out at 390 logical px (an iPhone screen width) and drawn at up to 3x for sharp text. */
 const PH_FONT='"29LT Bukra","IBM Plex Sans Arabic","Geeza Pro","Noto Naskh Arabic","Segoe UI",Tahoma,Arial,sans-serif';
-const PH={W:390,pad:14,cardPad:15,bg:"#F3F0EA",card:"#FFFFFF",line:"#DDD7CC",ink:"#14202B",body:"#26333E",muted:"#566370",faint:"#8794A0",chip:"#EDF0F2",noteBg:"#F4ECD8",noteInk:"#5E4610"};
+const PH={W:390,pad:14,cardPad:15,bg:"#FFFFFF",card:"#FFFFFF",line:"#DDD7CC",ink:"#14202B",body:"#26333E",muted:"#566370",faint:"#8794A0",chip:"#EDF0F2",noteBg:"#F4ECD8",noteInk:"#5E4610"};
 const loadImg=src=>new Promise(res=>{ const im=new Image(); im.onload=()=>res(im.naturalWidth?im:null); im.onerror=()=>res(null); im.src=src; setTimeout(()=>res(im.complete&&im.naturalWidth?im:null),10000); });
 function phWrap(ctx,text,maxW){
   const out=[];
@@ -1117,11 +1120,14 @@ function phWrap(ctx,text,maxW){
   }
   return out;
 }
+/* The official logos are white; on a light page draw them in the page's ink colour. */
+function inkLogo(im,color){ if(!im) return im; const cv=document.createElement("canvas"); cv.width=im.naturalWidth; cv.height=im.naturalHeight; const c=cv.getContext("2d");
+  c.drawImage(im,0,0); c.globalCompositeOperation="source-in"; c.fillStyle=color; c.fillRect(0,0,cv.width,cv.height); cv.naturalWidth=cv.width; cv.naturalHeight=cv.height; return cv; }
 const rrect=(ctx,x,y,w,h,r)=>{ ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); };
 async function phoneCanvas(n){
   const v=normNews(n);
   await docFonts();
-  const [gov,acis,police]=await Promise.all([LOGOS.gov,LOGOS.acis,LOGOS.police].map(loadImg));
+  const [gov,acis,police]=(await Promise.all([LOGOS.gov,LOGOS.acis,LOGOS.police].map(loadImg))).map(im=>inkLogo(im,PH.ink));
   const atts=(await Promise.all(v.imgs.map(a=>loadImg("/_blob/"+a.id)))).filter(Boolean);
   const meas=document.createElement("canvas").getContext("2d");
   const font=(px,wt)=>`${wt||400} ${px}px ${PH_FONT}`;
@@ -1220,7 +1226,7 @@ async function buildPhonePdf(n){
 
 function phoneHtml(n,imgs){
   const v=normNews(n), title=esc(v.hAr||v.hEn||"ACIS Security Analysis");
-  return `<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="color-scheme" content="light only"><meta name="format-detection" content="telephone=no,date=no,address=no"><title>${title}</title><style>html{background:#F3F0EA;color-scheme:light}body{margin:0;padding:env(safe-area-inset-top,0) env(safe-area-inset-right,0) env(safe-area-inset-bottom,0) env(safe-area-inset-left,0)}${PHCSS}</style></head><body class="ph">${phoneBody(n,imgs)}</body></html>`;
+  return `<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="color-scheme" content="light only"><meta name="format-detection" content="telephone=no,date=no,address=no"><title>${title}</title><style>html{background:#FFFFFF;color-scheme:light}body{margin:0;padding:env(safe-area-inset-top,0) env(safe-area-inset-right,0) env(safe-area-inset-bottom,0) env(safe-area-inset-left,0)}${PHCSS}</style></head><body class="ph">${phoneBody(n,imgs)}</body></html>`;
 }
 function openShare(n){
   const canShare=typeof navigator.share==="function";
@@ -2024,7 +2030,7 @@ Object.assign(T.ar,{exContent:"المحتوى",exFull:"الملف كاملاً",
   exHint:"يُرسم النص العربي كما يظهر على الشاشة تماماً، فتبقى الحروف متصلة وواضحة على كل الأجهزة.",
   pageOf:"صفحة {n} من {t}",docFoot:"إدارة أمن الهيئات والمنشآت الحيوية · شرطة دبي",linkDubai:"الصلة بدبي: ",reviewedByL:"تمت المراجعة من"});
 
-const LOGO_SRC={gov:"/_blob/5be0d5253729ae85226128d7500f2982",acis:"/_blob/b1dcdf8a583754ef7bfec3a744dc1ff8",police:"/_blob/5438a066ac0b2abe6f9b3b0d7851c092"};
+const LOGO_SRC={gov:"/_blob/322fd63800b52f604b57d7fd7f847990",acis:"/_blob/4522aa388c10184e0b52582ad3ddabe3",police:"/_blob/4c894cd48362b159cbe687ddad336ce9"};
 /* Smaller copies of the official logos for files that must open offline (phone HTML export). */
 (async()=>{ for(const k of ["gov","acis","police"]){ try{ const im=await loadImg(LOGO_SRC[k]); if(!im) continue; const h=180, w=Math.round(im.naturalWidth*h/im.naturalHeight); const cv=document.createElement("canvas"); cv.width=w; cv.height=h; const c=cv.getContext("2d"); c.imageSmoothingQuality="high"; c.drawImage(im,0,0,w,h); LOGOS[k]=cv.toDataURL("image/png"); }catch(_){} } })();
 
@@ -2075,7 +2081,7 @@ const cardOf=(G,tone)=>tone==="gold"?{pad:14,bg:G.pal.goldBg,border:G.pal.gold,r
 /* Block builders. Each block: {mt, keepNext, make(G)→{rows, card}, txt}. */
 const DB={
   plate:()=>({plate:true,mt:0,txt:"",make:G=>{ const lh=G.fmt.name==="phone"?34:40, band=lh+28*G.k;
-    return {rows:[{h:band+8*G.k,draw:(c,x,y)=>{ c.fillStyle=G.pal.plate; c.fillRect(0,y,G.W,band); c.fillStyle="#DDD7CC"; c.fillRect(0,y+band-1,G.W,1);
+    return {rows:[{h:band+8*G.k,draw:(c,x,y)=>{ c.fillStyle=G.pal.line; c.fillRect(G.M,y+band-1,G.W-2*G.M,1);
       const lg=G.logos; c.imageSmoothingQuality="high"; let right=G.W-G.M; const hP=lh*.9;
       if(lg.police){ const w2=lg.police.naturalWidth*hP/lg.police.naturalHeight; c.drawImage(lg.police,right-w2,y+(band-hP)/2,w2,hP); right-=w2+12*G.k; }
       const govW=lg.gov?lg.gov.naturalWidth*lh/lg.gov.naturalHeight:0; if(lg.gov) c.drawImage(lg.gov,G.M,y+(band-lh)/2,govW,lh);
@@ -2164,7 +2170,10 @@ function layoutDoc(doc,fmt,pal,l,unbounded,logos){
   });
   return {pages,end:y,headH,footH,G};
 }
-async function docLogos(){ const o={}; for(const k of ["gov","acis","police"]) o[k]=await loadImg(LOGO_SRC[k])||await loadImg(LOGOS[k]); return o; }
+async function docLogos(pal){ const o={}; const light=!pal||pal.bg==="#FFFFFF";
+  for(const k of ["gov","acis","police"]){ const im=await loadImg(LOGO_SRC[k])||await loadImg(LOGOS[k]); if(!im) continue;
+    o[k]=light?inkLogo(im,pal.ink):im; }
+  return o; }
 function drawChrome(c,doc,L,fmt,pal,l,p,n,H){
   const k=fmt.k, M=fmt.M, W=fmt.W;
   if(p>0&&H!==Infinity){ c.font=dfont(10.5*k,700); c.fillStyle=pal.muted; c.textBaseline="middle"; const d=l==="ar"?"rtl":"ltr"; c.direction=d; c.textAlign=d==="rtl"?"right":"left"; c.fillText(doc.short||doc.title,d==="rtl"?W-M:M,M*.6+L.headH/2-3*k); c.fillStyle=pal.line; c.fillRect(M,M*.6+L.headH-4*k,W-2*M,1); }
@@ -2175,7 +2184,7 @@ function drawChrome(c,doc,L,fmt,pal,l,p,n,H){
 }
 async function docPdf(doc,fmtKey,theme,l){
   await loadJsPdf(); await docFonts();
-  const fmt=DOCFMT[fmtKey], pal=DOCPAL[theme]||DOCPAL.light, logos=await docLogos();
+  const fmt=DOCFMT[fmtKey], pal=DOCPAL[theme]||DOCPAL.light, logos=await docLogos(pal);
   const L=layoutDoc(doc,fmt,pal,l,false,logos), n=L.pages.length, {jsPDF}=window.jspdf;
   let pdf=null;
   for(let p=0;p<n;p++){
@@ -2194,7 +2203,7 @@ async function docPdf(doc,fmtKey,theme,l){
 }
 async function docPng(doc,theme,l){
   await docFonts();
-  const fmt=DOCFMT.phone, pal=DOCPAL[theme]||DOCPAL.light, logos=await docLogos();
+  const fmt=DOCFMT.phone, pal=DOCPAL[theme]||DOCPAL.light, logos=await docLogos(pal);
   const L=layoutDoc(doc,fmt,pal,l,true,logos), H=Math.ceil(L.end+20+L.footH);
   let S=fmt.S; while(fmt.W*S*H*S>16000000&&S>1.5) S-=.25;
   if(fmt.W*S*H*S>16000000) throw {code:"too_long"};
@@ -3014,15 +3023,17 @@ showView(VIEWS.includes(location.hash.slice(1))?location.hash.slice(1):"countrie
   --sev-critical:#E5484D;--sev-high:#EE8434;--sev-medium:#D4AE3A;--sev-low:#5C8FD6;--gold:#C8A24A;--gold-soft:rgba(200,162,74,.14);color-scheme:dark;
   padding:max(12px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(12px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
 .ops[hidden]{display:none}
-.ops-h{direction:ltr;display:flex;align-items:center;gap:18px;background:#F3F0EA;color:#14202B;border-radius:12px;padding:8px 16px;flex-wrap:wrap}
+.ops-h{direction:ltr;display:flex;align-items:center;gap:18px;background:transparent;color:var(--fg);border-bottom:1px solid var(--line);padding:6px 4px 12px;flex-wrap:wrap}
 .ops-h img{height:42px;width:auto;display:block}
+:root[data-ui="light"] .ops-h img{filter:brightness(0);opacity:.86}
+.ops-h #opsAcis{height:30px}
 .ops-title{display:flex;align-items:center;gap:12px;flex:1;justify-content:center;font-family:var(--f-display);font-size:18px;min-width:0}
 .ops-live{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;font-weight:600;color:#C9343A}
 .ops-live i{width:9px;height:9px;border-radius:50%;background:#C9343A;animation:blink 1.2s infinite}
 .ops-clock{display:flex;flex-direction:column;align-items:flex-end;line-height:1.2}
-.ops-clock b{font-size:22px} .ops-clock span{font-size:12px;color:#566370}
+.ops-clock b{font-size:22px} .ops-clock span{font-size:12px;color:var(--muted)}
 .ops-r{display:flex;align-items:center;gap:16px}
-.ops-r .chipbtn{background:#14202B;color:#fff;border-color:#14202B}
+
 .ops-grid{flex:1;display:grid;grid-template-columns:minmax(0,1.7fr) minmax(340px,1fr);gap:14px;margin-top:14px;min-height:0}
 .ops-main{display:flex;flex-direction:column;gap:10px;min-width:0}
 .ops-mapbox{flex:1;background:var(--sea);border:1px solid var(--line);border-radius:12px;display:grid;place-items:center;min-height:260px;overflow:hidden}
@@ -3082,7 +3093,7 @@ showView(VIEWS.includes(location.hash.slice(1))?location.hash.slice(1):"countrie
 .ofc-w li{color:#C9D1D9}
 .ofc-empty{font-size:13px;line-height:1.8;padding:6px 2px}
 @media (max-width:1100px){.ops-grid{grid-template-columns:1fr}.ops-two{grid-template-columns:1fr}}
-@media (max-width:640px){#liveTop span,#opsBtn span{display:none}.ops-title{font-size:15px}.ops-h img{height:32px}}
+@media (max-width:640px){#liveTop span,#opsBtn span{display:none}.ops-title{font-size:15px}.ops-h img{height:32px}.ops-h #opsAcis{height:22px}}
 @media (max-width:640px){.ops-title{order:3;flex-basis:100%;justify-content:flex-start}.ops-clock b{font-size:18px}}
 
 
@@ -3090,8 +3101,8 @@ showView(VIEWS.includes(location.hash.slice(1))?location.hash.slice(1):"countrie
 #updBtn{background:#1E7A4F;border-color:#1E7A4F;color:#fff;font-weight:600;font-family:var(--f-body);font-size:13px}
 #updBtn:hover{filter:brightness(1.08)}
 .ops-title{flex-wrap:wrap}
-.ops-h .updline{margin:0;font-family:var(--f-body);font-size:12px;color:#566370}
-.ops-h .updline b{color:#14202B}
+.ops-h .updline{margin:0;font-family:var(--f-body);font-size:12px;color:var(--muted)}
+.ops-h .updline b{color:var(--fg)}
 #updBtn.spin svg{animation:lvspin 1s linear infinite}
 #updBtn:disabled{opacity:.75;cursor:default}
 .updline{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);margin:0 0 12px}
@@ -3191,7 +3202,7 @@ showView(VIEWS.includes(location.hash.slice(1))?location.hash.slice(1):"countrie
 #watchBtn .wdot{width:8px;height:8px;border-radius:50%;background:#8794A0;flex:none}
 #watchBtn[aria-pressed="true"]{border-color:#1E7A4F;color:#1E7A4F}
 #watchBtn[aria-pressed="true"] .wdot{background:#1E7A4F;animation:blink 1.4s infinite}
-.ops-h #watchLine{margin:0;font-family:var(--f-body);font-size:12px;color:#566370}
+.ops-h #watchLine{margin:0;font-family:var(--f-body);font-size:12px;color:var(--muted)}
 #opsBtn{position:relative}
 #opsBtn.watching::after{content:"";position:absolute;top:-3px;inset-inline-end:-3px;width:9px;height:9px;border-radius:50%;background:var(--accent);border:2px solid var(--panel);animation:blink 1.4s infinite}
 .fcv-foot{margin:0!important;border-radius:0 0 14px 14px}
