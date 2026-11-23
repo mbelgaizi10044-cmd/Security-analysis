@@ -1,5 +1,5 @@
 {
- "exportedAt": 1795418486974,
+ "exportedAt": 1795425713895,
  "source": "ACIS Security Analysis (Claude artifact)",
  "news": [
   {
@@ -4060,10 +4060,10 @@
   "SO": {
    "auto": "live",
    "level": "critical",
-   "noteAr": "لا تتضمن النتائج أي أحداث أمنية مؤرخة في 23 نوفمبر 2026، إذ إن أحدث المواد مؤرخة في 22 نوفمبر 2026 أو قبله وتتداخل مع المدخلات المحفوظة. ويبقى المستوى حرجاً بسبب قرار الصومال في 19 نوفمبر مطالبة سفير دولة الإمارات بمغادرة البلاد خلال 72 ساعة واستدعاء سفيرها واتهامه الإمارات بـ«غزو علني»، إضافة إلى الأزمة السياسية والقضائية القائمة وانتهاء ولاية بعثة الاتحاد الأفريقي (أوسوم) في 31 ديسمبر واستمرار تهديد حركة الشباب.",
-   "noteEn": "No security events dated 2026-11-23 appear in the results; the latest items are dated 2026-11-22 or earlier and overlap with saved entries. The level remains critical because of Somalia's 19 November order for the UAE ambassador to leave within 72 hours, its recall of its own envoy and its accusations of an 'open invasion' by the UAE, together with the unresolved political and judicial crisis, the AUSSOM mandate expiring on 31 December and the persistent al-Shabaab threat.",
+   "noteAr": "لا تتضمن نتائج البحث أي أحداث أمنية مؤرخة في 23 نوفمبر 2026، وتعود أحدث المواد المؤرخة إلى 22 نوفمبر 2026 أو ما قبله وتتداخل مع الإدخالات المحفوظة. ويبقى مستوى التهديد حرجاً بسبب قرار الصومال في 19 نوفمبر مطالبة سفير دولة الإمارات بمغادرة البلاد خلال 72 ساعة واستدعاء سفيره من أبوظبي واتهامه الإمارات بـ«غزو علني»، إضافة إلى الأزمة السياسية والقضائية القائمة وانتهاء ولاية بعثة الاتحاد الأفريقي (أوصوم) في 31 ديسمبر واستمرار تهديد حركة الشباب.",
+   "noteEn": "No security events dated 2026-11-23 appear in the search results; the latest dated items are from 2026-11-22 or earlier and overlap with saved entries. The level remains critical because of Somalia's 19 November order for the UAE ambassador to leave within 72 hours, its recall of its own envoy and its accusation of an 'open invasion' by the UAE, together with the unresolved political and judicial crisis, the AUSSOM mandate expiring on 31 December and the persistent al-Shabaab threat.",
    "trend": "steady",
-   "updatedAt": 1795415242468
+   "updatedAt": 1795423878457
   },
   "UA": {
    "auto": "live",
