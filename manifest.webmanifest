@@ -1,0 +1,13 @@
+{
+  "name": "التحليل الأمني · ACIS Security Analysis",
+  "short_name": "التحليل الأمني",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b4f2f",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/app-icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

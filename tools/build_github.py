@@ -137,6 +137,17 @@ def build_page(live, asset_ids):
     files = {i: asset_path(i) for i in asset_ids}
     g = rep(g, "/* ---------- Render / boot ---------- */\n",
             SNAPCODE.replace("__ASSET_FILES__", json.dumps(files)) + "/* ---------- Render / boot ---------- */\n")
+    # Safari reads the home-screen icon only from <head>: move the page's title, icon and meta tags there
+    # (inside Claude they sit at the top of <body>, after the platform's own skeleton).
+    m = re.search(r"</head><body>\s*((?:<(?:title>[^<]*</title|link [^>]*|meta [^>]*)>\s*)+)", g)
+    if not m:
+        sys.exit("build_github: could not find the title and icon tags at the top of the page")
+    head_tags = m.group(1).strip()
+    head_tags += ('\n<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">'
+                  '\n<link rel="manifest" href="manifest.webmanifest">'
+                  '\n<meta name="apple-mobile-web-app-capable" content="yes">'
+                  '\n<meta name="mobile-web-app-capable" content="yes">')
+    g = g[:m.start()] + head_tags + "\n</head><body>\n" + g[m.end():]
     return g
 
 
