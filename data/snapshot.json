@@ -1,5 +1,5 @@
 {
- "exportedAt": 1795416491299,
+ "exportedAt": 1795418486974,
  "source": "ACIS Security Analysis (Claude artifact)",
  "news": [
   {
@@ -3877,10 +3877,10 @@
   "BH": {
    "auto": "live",
    "level": "high",
-   "noteAr": "شنت إيران هجمات متكررة على البحرين خلال هذا الشهر، كان آخرها في 21 نوفمبر بموجتين من الطائرات المسيّرة والصواريخ استهدفتا مواقع مرتبطة بالولايات المتحدة، وأدتا إلى اندلاع حريق في منشأة صناعية مدنية وإصابة شخصين. ولا تتضمن نتائج البحث بتاريخ 23 نوفمبر سوى ملخص للهجوم نفسه المسجّل مسبقاً، دون أي أحداث جديدة مستقلة. ويبقى مستوى الخطر على البعثات الدبلوماسية مرتفعاً في ظل الهجمات على الملاحة قرب مضيق هرمز وتعثر المحادثات الأمريكية الإيرانية والمزاعم الإيرانية بشأن إجراء وشيك ضد الحصار الأمريكي.",
-   "noteEn": "Iran has struck Bahrain repeatedly this month, most recently on 21 November with two waves of drone and missile attacks on US-linked sites that set a civilian industrial facility ablaze and injured two people. The search results for 23 November contain only a summary of the same attack, already saved, and no new distinct events. Shipping attacks near Hormuz, the stalled US-Iran talks and Iranian claims of imminent action against the US blockade keep the risk to diplomatic missions elevated.",
+   "noteAr": "شنّت إيران هجمات متكررة على البحرين خلال هذا الشهر، كان آخرها في 21 نوفمبر بطائرات مسيّرة وصواريخ استهدفت مواقع مرتبطة بالولايات المتحدة، وأدت إلى اندلاع حريق في منشأة صناعية مدنية وإصابة شخصين، في حين لا تزال المحادثات بين الولايات المتحدة وإيران متعثرة. ويُبقي استمرار الهجمات على الملاحة قرب مضيق هرمز والتهديدات الإيرانية المرتبطة بالحصار البحري الأمريكي مستوى المخاطر على البعثات الدبلوماسية مرتفعاً، ولا تتضمن نتائج البحث ليوم 23 نوفمبر أي أحداث جديدة مستقلة.",
+   "noteEn": "Iran has repeatedly struck Bahrain this month, most recently on 21 November with drone and missile attacks on US-linked sites that set a civilian industrial facility ablaze and injured two people, and the US-Iran talks remain stalled. Shipping attacks near Hormuz and Iranian threats tied to the US naval blockade keep the risk to diplomatic missions elevated, and the 23 November results contain no new distinct events.",
    "trend": "steady",
-   "updatedAt": 1795415248467
+   "updatedAt": 1795417326634
   },
   "CA": {
    "auto": "live",
@@ -3945,10 +3945,10 @@
     "type": "cg",
     "updatedAt": 1794821327271
    },
-   "noteAr": "لا تتضمن النتائج أي أحداث أمنية جديدة بتاريخ 2026-11-23 سوى تقرير موقع المونيتور عن سعي إسرائيل إلى شن حملة جوية ضد إيران، وهو محفوظ مسبقاً. ويبقى مستوى التهديد مرتفعاً بسبب التخطيط الأمريكي الإسرائيلي المعلن لعمل محتمل متجدد ضد إيران، واستمرار العمليات الإسرائيلية في غزة وجنوب لبنان، وتعثر مفاوضات تشكيل الائتلاف قبل مهلة 6 ديسمبر، في حين لا تظهر في النتائج أي تهديد مباشر للبعثات الدبلوماسية أو لدولة الإمارات.",
-   "noteEn": "The results contain no new security events dated 2026-11-23 beyond the Al-Monitor report on Israel's push for an air campaign against Iran, which is already saved. Risk stays high because of reported US-Israeli planning for possible renewed action against Iran, continuing Israeli operations in Gaza and southern Lebanon, and deadlocked coalition talks ahead of the December 6 deadline, while no direct threat to diplomatic missions or the UAE appears in the results.",
+   "noteAr": "لا تتضمن النتائج أي أحداث أمنية جديدة بتاريخ 2026-11-23 باستثناء تقرير موقع المونيتور عن سعي إسرائيل إلى شن حملة جوية ضد إيران، وهو محفوظ مسبقاً. ويبقى المستوى مرتفعاً بسبب التخطيط الأمريكي الإسرائيلي المعلن لاحتمال تجدد العمل ضد إيران، واستمرار العمليات الإسرائيلية في غزة وجنوب لبنان، وتعثر مفاوضات تشكيل الائتلاف قبيل الموعد النهائي في 6 ديسمبر، في حين لا تظهر في النتائج أي تهديدات مباشرة للبعثات الدبلوماسية أو لدولة الإمارات.",
+   "noteEn": "No new security events dated 2026-11-23 appear in the results beyond the Al-Monitor report on Israel's push for an air campaign against Iran, which is already saved. The level stays high because of reported US-Israeli planning for possible renewed action against Iran, continuing Israeli operations in Gaza and southern Lebanon, and deadlocked coalition talks ahead of the December 6 deadline, while no direct threat to diplomatic missions or the UAE appears in the results.",
    "trend": "steady",
-   "updatedAt": 1795415258966
+   "updatedAt": 1795417333410
   },
   "IN": {
    "auto": "live",
@@ -3968,10 +3968,10 @@
     "type": "cg",
     "updatedAt": 1794821332436
    },
-   "noteAr": "تواصل إيران هجماتها على الأصول الأمريكية في البحرين وعلى الملاحة في مضيق هرمز، وتجهز 14 ناقلة لتحدي الحصار الأمريكي، وتستمر التقارير عن ضربات أمريكية إسرائيلية جديدة، رغم إرجاء الضربة الأمريكية أسبوعاً على الأقل بحسب التقارير. وتمثل هذه الظروف خطراً إقليمياً مباشراً على دولة الإمارات وبعثاتها الدبلوماسية، وتبقى التهديدات السابقة ضد منشآت النفط الخليجية والشبكات في دبي قائمة.",
-   "noteEn": "Iran continues attacks on US assets in Bahrain and on Hormuz shipping, is preparing 14 tankers to challenge the US blockade, and reports of renewed US-Israeli strikes persist, although a US strike is reportedly postponed by at least a week. These conditions pose a direct regional risk to the UAE and its diplomatic missions, and earlier threats against Gulf oil facilities and Dubai networks remain relevant.",
+   "noteAr": "تواصل إيران هجماتها على الأصول الأمريكية في البحرين وعلى الملاحة في مضيق هرمز وتستعد لدفع 14 ناقلة لتحدي الحصار الأمريكي، بينما يقول ترامب إنه قد يستأنف الضربات بعد رأس السنة وتتواصل التقارير عن ضغط إسرائيلي لتنفيذ ضربة مشتركة. ورغم أن الضربة الأمريكية مؤجلة بحسب التقارير لمدة أسبوع على الأقل، فإن التهديدات الإيرانية السابقة للمنشآت النفطية الخليجية والشبكات في دبي لا تزال قائمة وتمس دولة الإمارات وبعثاتها الدبلوماسية.",
+   "noteEn": "Iran continues attacks on US assets in Bahrain and on Hormuz shipping and is preparing 14 tankers to challenge the US blockade, while Trump says he may resume strikes after the new year and reports of Israeli-US pressure for a joint strike persist. Although a US strike is reportedly postponed by at least a week, earlier Iranian threats against Gulf oil facilities and Dubai networks remain relevant to the UAE and its diplomatic missions.",
    "trend": "steady",
-   "updatedAt": 1795415253154
+   "updatedAt": 1795417335265
   },
   "LB": {
    "auto": "live",
