@@ -8,6 +8,8 @@
 <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-title" content="التحليل الأمني">
 <meta name="theme-color" content="#0b4f2f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 <style>
   :root{--bg:#ffffff;--fg:#10261b;--muted:#5b6b62;--accent:#0b4f2f;--accent-fg:#ffffff}
   @media (prefers-color-scheme: dark){:root{--bg:#0c1511;--fg:#e8efe9;--muted:#9aaba1;--accent:#2f9e63;--accent-fg:#06110b;color-scheme:dark}}
@@ -24,11 +26,16 @@
 <body>
 <img src="../assets/app-icon.png" alt="">
 <h1>التحليل الأمني</h1>
-<p>جارٍ فتح المنصة المباشرة…</p>
+<p id="msg">أضيفي هذه الصفحة إلى الشاشة الرئيسية: زر المشاركة ← «إضافة إلى الشاشة الرئيسية». عند فتحها من الأيقونة تنتقل مباشرة إلى المنصة.</p>
 <a id="go" href="https://claude.ai/artifact/DsU49JCHQELFXtbgarfNb4">افتح المنصة</a>
 <script>
-  // Open the live platform on Claude. Added to the home screen, this page keeps the ACIS eye icon.
-  setTimeout(function(){ location.replace(document.getElementById("go").href); }, 400);
+  // In Safari the page stays put so it can be added to the home screen with the ACIS eye icon.
+  // Opened from that icon (standalone), it goes straight to the live platform on Claude.
+  var standalone = window.navigator.standalone === true || (window.matchMedia && matchMedia("(display-mode: standalone)").matches);
+  if (standalone) {
+    document.getElementById("msg").textContent = "جارٍ فتح المنصة المباشرة…";
+    setTimeout(function(){ location.replace(document.getElementById("go").href); }, 300);
+  }
 </script>
 </body>
 </html>
